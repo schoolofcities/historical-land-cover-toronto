@@ -4,6 +4,7 @@
 
     import notToronto from '../assets/ref/not-toronto.geo.json';
     import majorStreets from '../assets/ref/major-roads.geo.json';
+    import labelStreets from '../assets/ref/major-streets-split.geo.json';
 
     import {Map, View} from 'ol';
     import XYZ from 'ol/source/XYZ';
@@ -89,6 +90,41 @@
       	},		
 	});
 
+    // streets layer labels 2022ish
+    var features = new GeoJSON().readFeatures(labelStreets, {
+		});
+	var vectorSource = new VectorSource({
+		features
+	});
+	var textStyleLabels = new Style({
+            text: new Text({
+                declutter: true,
+                font: 'bold 12px "Roboto", "Arial Unicode MS", "sans-serif"',
+                placement: 'line',
+                // padding: [540,540,540,540],
+                // overflow: true,
+                scale: 1,
+                fill: new Fill({
+                    color: '#0D534D',
+                }),
+                stroke: new Stroke({
+                    color: 'white',
+                    width: 2
+                })
+            }),
+            stroke: new Stroke({
+                color: '#1E3765',
+                width: 1.5
+            })
+		});
+	var streetLabelLayer = new VectorLayer({
+		declutter: true,
+		source: vectorSource,
+		style: function (feature) {
+			textStyleLabels.getText().setText(feature.get('n'));
+        	return textStyleLabels;
+      	},		
+	});
 
 
     useGeographic();
@@ -106,7 +142,7 @@
         map = new Map({
 			target: 'map',
 			// layers: [leftLayer, rightLayer, notTorontoLayer, streetLayer],
-			layers: [landCoverLayer, notTorontoLayer, streetLayer],
+			layers: [landCoverLayer, notTorontoLayer, streetLayer, streetLabelLayer],
 			view: new View({
 				center: [-79.38,43.70],
 				zoom: 12.5,
