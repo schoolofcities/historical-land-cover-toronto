@@ -25,7 +25,7 @@
 		padding-left: 0px;
 		padding-right: 0px;
 		z-index: 5;
-		opacity: 0.8;
+		opacity: 0.98;
 	}
 
 	#logo {
@@ -50,5 +50,5 @@
 		opacity: 0.7;
 		cursor: pointer;
 	}
-	
+
 </style>

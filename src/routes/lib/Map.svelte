@@ -3,6 +3,7 @@
     import { onMount } from 'svelte';
 
     import notToronto from '../assets/ref/not-toronto.geo.json';
+    import majorStreets from '../assets/ref/major-roads.geo.json';
 
     import {Map, View} from 'ol';
     import XYZ from 'ol/source/XYZ';
@@ -39,7 +40,7 @@
 	});
 	const style = new Style({
 		fill: new Fill({
-			color: '#fff',
+			color: '#ffffff',
 		}),
 		stroke: new Stroke({
 			color: '#1E3765',
@@ -49,6 +50,43 @@
 	var notTorontoLayer = new VectorLayer({
 		source: vectorSource,
 		style: style
+	});
+
+
+    // streets layer 2022ish
+    var features = new GeoJSON().readFeatures(majorStreets, {
+		});
+	var vectorSource = new VectorSource({
+		features
+	});
+	var textStyle = new Style({
+            text: new Text({
+                declutter: true,
+                font: 'bold 12px "Roboto", "Arial Unicode MS", "sans-serif"',
+                placement: 'line',
+                // padding: [540,540,540,540],
+                // overflow: true,
+                scale: 1,
+                fill: new Fill({
+                    color: '#0D534D',
+                }),
+                stroke: new Stroke({
+                    color: 'white',
+                    width: 2
+                })
+            }),
+            stroke: new Stroke({
+                color: '#1E3765',
+                width: 1
+            })
+		});
+	var streetLayer = new VectorLayer({
+		declutter: true,
+		source: vectorSource,
+		style: function (feature) {
+			textStyle.getText().setText(feature.get('n'));
+        	return textStyle;
+      	},		
 	});
 
 
@@ -68,7 +106,7 @@
         map = new Map({
 			target: 'map',
 			// layers: [leftLayer, rightLayer, notTorontoLayer, streetLayer],
-			layers: [landCoverLayer, notTorontoLayer],
+			layers: [landCoverLayer, notTorontoLayer, streetLayer],
 			view: new View({
 				center: [-79.38,43.70],
 				zoom: 12.5,
