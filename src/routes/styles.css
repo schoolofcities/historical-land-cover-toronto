@@ -24,8 +24,6 @@
 body {
     padding: 0px;
     margin: 0px;
-    /* background-color: #e5e5f7; */
-    /* opacity: 0.8; */
     background-color: var(--brandWhite);
 }
 
@@ -33,8 +31,36 @@ main {
     margin: 0 auto;
     width: 100%;
     min-width: 320px;
-    max-width: 1920px;
+    max-width: 100%;
     position: relative;
+}
+
+#map {
+    /* background-color: var(--brandRed); */
+    height: calc(100vh - 20px);
+    border-bottom: solid 1px var(--brandDarkBlue);
+    width: 100%;
+}
+
+.arrow {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: -16px;
+    text-align: center;
+    color: var(--brandDarkBlue);
+}
+
+.text {
+    max-width: 720px;
+    margin: 0 auto;
+    color: var(--brandDarkBlue);
+    font-family:  'Ubuntu Mono', monospace;
+    font-weight: 400px;
+    font-size: 19px;
+    line-height: 30px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 

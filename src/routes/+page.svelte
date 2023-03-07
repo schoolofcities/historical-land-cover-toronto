@@ -10,10 +10,12 @@
 <svelte:head>
 
 	<link
-		href="https://fonts.googleapis.com/css2?family=Roboto&family=Source+Serif+Pro&display=swap"
-		rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Roboto&family=Source+Serif+Pro&display=swap"	rel="stylesheet"
 	/>
-	<link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"/> 
+
+	<link 
+		href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"
+	/> 
 
 	<link 
 		href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;800&display=swap" rel="stylesheet"
@@ -23,7 +25,7 @@
 		content="width=device-width, initial-scale=1, minimum-scale=1"
 	/>
 
-	<link href='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css' rel='stylesheet' />
+	<!-- <link href='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css' rel='stylesheet' /> -->
 
     <!-- <title>Tracking Gentle Density in Toronto</title>
     <meta name="description" content="Visualizing 10 years (2013 to 2022) of Secondary Suite and Laneway / Garden Suite building permits in Toronto">
@@ -50,7 +52,19 @@
 <Top/>
 
 <main>
+	
+	<div id="map">
+		
+	</div>
 
-	meow meow meow
+	<div class="arrow">
+		<p>▼</p>
+	</div>
+
+	<div class="text">
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</p>
+	</div>
 
 </main>

@@ -11,6 +11,7 @@
 </div>
 
 <style>
+
 	#bar {
 		position: fixed;
 		overflow: hidden;
@@ -23,17 +24,14 @@
 		min-width: 200px;
 		padding-left: 0px;
 		padding-right: 0px;
-		/* text-align: center; */
 		z-index: 5;
 		opacity: 0.8;
-		/* box-shadow: 0 2px 0 0 var(--brandLightBlue); */
 	}
 
 	#logo {
 		margin: auto;
 		max-width: 230px;
 		height: 50px;
-		/* background-color: aquamarine; */
 	}
 
 	a {
@@ -52,4 +50,5 @@
 		opacity: 0.7;
 		cursor: pointer;
 	}
+	
 </style>
