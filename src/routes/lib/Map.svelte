@@ -33,6 +33,18 @@
         source: landCoverSource
     });
 
+    // initial land cover layer
+    var smallStreetsSource = new XYZ({
+        url: "./historical-land-cover-toronto/streets-local/{z}/{x}/{y}.png"
+        // url: 'https://maps.library.utoronto.ca/tiles1947/{z}/{x}/{y}.png'
+    });
+    var smallStreetsLayer = new TileLayer({
+        minZoom: 14,
+        maxZoom: 15,
+        opacity: 1,
+        source: smallStreetsSource
+    });
+
     // not Toronto layer
     var features = new GeoJSON().readFeatures(notToronto, {
 		});
@@ -120,6 +132,8 @@
 	var streetLabelLayer = new VectorLayer({
 		declutter: true,
 		source: vectorSource,
+        maxZoom: 15,
+		minZoom: 13,
 		style: function (feature) {
 			textStyleLabels.getText().setText(feature.get('n'));
         	return textStyleLabels;
@@ -142,9 +156,10 @@
         map = new Map({
 			target: 'map',
 			// layers: [leftLayer, rightLayer, notTorontoLayer, streetLayer],
-			layers: [landCoverLayer, notTorontoLayer, streetLayer, streetLabelLayer],
+			layers: [landCoverLayer, notTorontoLayer, smallStreetsLayer, streetLayer, streetLabelLayer],
 			view: new View({
 				center: [-79.38,43.70],
+                rotation: 0.29,
 				zoom: 12.5,
 				maxZoom: 15,
 				minZoom: 12,
