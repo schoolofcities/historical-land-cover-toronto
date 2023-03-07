@@ -2,6 +2,8 @@
 
     import { onMount } from 'svelte';
 
+    import notToronto from '../assets/ref/not-toronto.geo.json';
+
     import {Map, View} from 'ol';
     import XYZ from 'ol/source/XYZ';
 	import TileLayer from 'ol/layer/Tile';
@@ -9,19 +11,47 @@
     import {get as getProjection} from 'ol/proj';
 	import {getWidth} from 'ol/extent';
 
+    import {Fill, Stroke, Style, Text} from 'ol/style';
+
+    import GeoJSON from 'ol/format/GeoJSON';
+	import VectorLayer from 'ol/layer/Vector';
+	import VectorSource from 'ol/source/Vector';
+
     import ZoomSlider from 'ol/control/ZoomSlider';
 	import {defaults as defaultControls} from 'ol/control';
 	import {ScaleLine} from 'ol/control';
 
+    // initial land cover layer
     var landCoverSource = new XYZ({
         url: "./historical-land-cover-toronto/1973/tiles/{z}/{x}/{y}.png"
         // url: 'https://maps.library.utoronto.ca/tiles1947/{z}/{x}/{y}.png'
     });
-
     var landCoverLayer = new TileLayer({
         opacity: 1,
         source: landCoverSource
     });
+
+    // not Toronto layer
+    var features = new GeoJSON().readFeatures(notToronto, {
+		});
+	var vectorSource = new VectorSource({
+		features
+	});
+	const style = new Style({
+		fill: new Fill({
+			color: '#fff',
+		}),
+		stroke: new Stroke({
+			color: '#1E3765',
+			width: 1
+		})
+	});
+	var notTorontoLayer = new VectorLayer({
+		source: vectorSource,
+		style: style
+	});
+
+
 
     useGeographic();
 	const resolutions = [];
@@ -38,7 +68,7 @@
         map = new Map({
 			target: 'map',
 			// layers: [leftLayer, rightLayer, notTorontoLayer, streetLayer],
-			layers: [landCoverLayer],
+			layers: [landCoverLayer, notTorontoLayer],
 			view: new View({
 				center: [-79.38,43.70],
 				zoom: 12.5,
