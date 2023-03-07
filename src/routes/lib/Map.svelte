@@ -5,6 +5,7 @@
     import notToronto from '../assets/ref/not-toronto.geo.json';
     import majorStreets from '../assets/ref/major-roads.geo.json';
     import labelStreets from '../assets/ref/major-streets-split.geo.json';
+    import sixLabels from '../assets/ref/six-labels.geo.json';
 
     import {Map, View} from 'ol';
     import XYZ from 'ol/source/XYZ';
