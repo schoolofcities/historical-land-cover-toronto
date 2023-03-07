@@ -35,9 +35,9 @@ main {
     position: relative;
 }
 
-#map {
+#map-wrapper {
     /* background-color: var(--brandRed); */
-    height: calc(100vh - 20px);
+    height: calc(100vh - 22px);
     border-bottom: solid 1px var(--brandDarkBlue);
     width: 100%;
 }
@@ -54,9 +54,9 @@ main {
     max-width: 720px;
     margin: 0 auto;
     color: var(--brandDarkBlue);
-    font-family:  'Ubuntu Mono', monospace;
+    font-family: 'EB Garamond', serif;
     font-weight: 400px;
-    font-size: 19px;
+    font-size: 20px;
     line-height: 30px;
     padding-bottom: 20px;
     padding-left: 20px;

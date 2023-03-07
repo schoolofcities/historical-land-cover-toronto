@@ -1,6 +1,7 @@
 <script>
 
 	import Top from "./lib/TopSofC.svelte";
+	import Map from "./lib/Map.svelte";
 	import './styles.css';
 
 </script>
@@ -53,8 +54,8 @@
 
 <main>
 	
-	<div id="map">
-		
+	<div id="map-wrapper">
+		<Map/>
 	</div>
 
 	<div class="arrow">
