@@ -18,14 +18,14 @@
 		height: 50px;
 		background-color: var(--brandDarkBlue);
 		margin-bottom: 20px;
-		border-bottom: 1px solid var(--brandLightBlue);
+		border-bottom: 1px solid var(--brandWhite);
 		width: 100%;
 		min-width: 200px;
 		padding-left: 0px;
 		padding-right: 0px;
 		/* text-align: center; */
 		z-index: 5;
-		opacity: 0.92;
+		opacity: 0.8;
 		/* box-shadow: 0 2px 0 0 var(--brandLightBlue); */
 	}
 
@@ -49,7 +49,7 @@
 	}
 	img:hover {
 		height: 50px;
-		opacity: 0.5;
+		opacity: 0.7;
 		cursor: pointer;
 	}
 </style>

@@ -1,24 +1,24 @@
+
 @font-face {
     font-family: TradeGothicBold;
     src: url("./assets/Trade Gothic LT Bold.ttf");
 }
+
 :root {
     font-family: Roboto, sans-serif;
-    --brandDarkBlue: #1470ad;
-    --brandLightBlue: #8EB6DC;
-    --brandRed: #ab1269; 
+    --brandDarkBlue: #1E3765;
+    --brandMedBlue: #007FA3;
+    --brandLightBlue: #6FC7EA;
+    --brandPurple: #6D247A;
+    --brandPink: #AB1368;
+    --brandDarkGreen: #0D534D;
+    --brandMedGreen: #00A189;
+    --brandLightGreen: #8DBF2E;
+    --brandRed: #DC4633; 
     --brandYellow: #F1C500;
-
-    --range-slider:          #8EB6DC; /* slider main background color */
-    --range-handle-inactive: #ffffff; /* inactive handle color */
-    --range-handle:          #ffffff; /* non-focussed handle color */
-    --range-handle-focus:    #ffffff; /* focussed handle color */
-    --range-handle-border:   var(--range-handle);
-    --range-range-inactive:  var(--range-handle-inactive); /* inactive range bar background color */
-    --range-range:           var(--range-handle-focus); /* active range bar background color */
-    --range-float-inactive:  var(--range-handle-inactive); /* inactive floating label background color */
-    --range-float:           var(--range-handle-focus); /* floating label background color */
-    --range-float-text:      white; /* text color on floating label */
+    --brandBlack: #000000;
+    --brandWhite: #ffffff;
+    --brandGay: #D0D1C9;
 }
 
 body {
@@ -26,11 +26,7 @@ body {
     margin: 0px;
     /* background-color: #e5e5f7; */
     /* opacity: 0.8; */
-    background-color: #ffffff;
-    opacity: 1;
-    background-size: 13px 13px;
-    background-image: repeating-linear-gradient(45deg, #eaf5ff 0, #eaf5ff 1.3px, #ffffff 0, #ffffff 50%);
-    border-top: solid 1px var(--brandLightBlue);
+    background-color: var(--brandWhite);
 }
 
 main {
