@@ -172,8 +172,15 @@
 </script>
 
 
+
+
+
 <div id="legend">
 
+    <h1>Historical Land-Cover Toronto</h1>
+
+    
+    
 
 </div>
 
@@ -193,9 +200,9 @@
         right: 10px;
         height: 213px;
         width: 300px;
-        background-color: var(--brandWhite);
+        background-color: rgba(255, 255, 255, 0.90);
         border: solid 1px var(--brandDarkBlue);
-        border-top-left-radius: 50px;
+        border-top-left-radius: 0px;
         z-index: 1;
     }
     
