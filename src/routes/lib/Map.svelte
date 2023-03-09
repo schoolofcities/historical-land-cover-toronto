@@ -17,7 +17,7 @@
 	import {getWidth} from 'ol/extent';
 
 
-    import {Fill, Stroke, Style, Text} from 'ol/style';
+    import {Fill, Stroke, Style, Text, Circle} from 'ol/style';
 
     import GeoJSON from 'ol/format/GeoJSON';
 	import VectorLayer from 'ol/layer/Vector';
@@ -77,11 +77,9 @@
                 declutter: true,
                 font: 'bold 12px "Roboto", "Arial Unicode MS", "sans-serif"',
                 placement: 'line',
-                // padding: [540,540,540,540],
-                // overflow: true,
                 scale: 1,
                 fill: new Fill({
-                    color: '#0D534D',
+                    color: '#1E3765',
                 }),
                 stroke: new Stroke({
                     color: 'white',
@@ -113,8 +111,6 @@
                 declutter: true,
                 font: 'bold 12px "Roboto", "Arial Unicode MS", "sans-serif"',
                 placement: 'line',
-                // padding: [540,540,540,540],
-                // overflow: true,
                 scale: 1,
                 fill: new Fill({
                     color: '#0D534D',
@@ -141,6 +137,39 @@
 	});
 
 
+    // six area labels
+    var features = new GeoJSON().readFeatures(sixLabels, {
+		});
+	var vectorSource = new VectorSource({
+		features
+	});
+	var textSixStyleLabels = new Style({
+            text: new Text({
+                declutter: true,
+                font: 'bold italic 20px "Roboto", "Arial Unicode MS", "sans-serif"',
+                placement: 'point',
+                scale: 1,
+                fill: new Fill({
+                    color: '#1E3765',
+                }),
+                stroke: new Stroke({
+                    color: 'white',
+                    width: 3
+                })
+            })
+		});
+	var sixLabelLayer = new VectorLayer({
+		declutter: true,
+		source: vectorSource,
+		style: function (feature) {
+			textSixStyleLabels.getText().setText(feature.get('name'));
+        	return textSixStyleLabels;
+      	},		
+	});
+
+
+
+
     useGeographic();
 	const resolutions = [];
 	const matrixIds = [];
@@ -155,10 +184,10 @@
 
         map = new Map({
 			target: 'map',
-			layers: [landCoverLayer, notTorontoLayer, smallStreetsLayer, streetLayer, streetLabelLayer],
+			layers: [landCoverLayer, notTorontoLayer, smallStreetsLayer, streetLayer, streetLabelLayer, sixLabelLayer],
 			view: new View({
 				center: [-79.38,43.70],
-                rotation: 0.29,
+                rotation: 17 * Math.PI / 180,
 				zoom: 12.5,
 				maxZoom: 15,
 				minZoom: 12,
@@ -177,10 +206,33 @@
 
 <div id="legend">
 
-    <h1>Historical Land-Cover Toronto</h1>
+    <h3>Historical Land-Cover Toronto</h3>
 
-    
-    
+    <div id="land-cover">
+
+        <svg class="" height="45" width="300">
+
+            <rect id="land-built" width="15" height="15" x="1" y="1"/>
+            <text x="19" y="15" class="land-cover-text">Built</text>
+
+            <rect id="land-grass" width="15" height="15" x="61" y="1"/>
+            <text x="79" y="15" class="land-cover-text">Grass</text>
+
+            <rect id="land-forest" width="15" height="15" x="130" y="1"/>
+            <text x="148" y="15" class="land-cover-text">Forest</text>
+
+            <rect id="land-bare" width="15" height="15" x="1" y="22"/>
+            <text x="19" y="36" class="land-cover-text">Bare</text>
+
+            <rect id="land-water" width="15" height="15" x="61" y="22"/>
+            <text x="79" y="36" class="land-cover-text">Water</text>
+
+            <rect id="land-nodata" width="15" height="15" x="130" y="22"/>
+            <text x="148" y="36" class="land-cover-text">No Data</text>
+
+        </svg>
+
+    </div>
 
 </div>
 
@@ -204,6 +256,60 @@
         border: solid 1px var(--brandDarkBlue);
         border-top-left-radius: 0px;
         z-index: 1;
+    }
+
+    h3 {
+        font-family: TradeGothicBold;
+        font-size: 22px;
+        background-color: var(--brandDarkBlue);;
+        color: var(--brandWhite);
+        padding-left: 10px;
+        margin-top: 3px;
+        margin-bottom: 5px;
+        border-bottom: 1px solid var(--brandDarkBlue);
+    }
+
+    #land-cover {
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 5px;
+        border-bottom: 1px solid var(--brandDarkBlue);
+    }
+    #land-built {
+        fill: var(--brandRed);
+        stroke: var(--brandGray);
+        stroke-width: 1px;
+    }
+    #land-grass {
+        fill: var(--brandLightGreen);
+        stroke: var(--brandGray);
+        stroke-width: 1px;
+    }
+    #land-forest {
+        fill: var(--brandDarkGreen);
+        stroke: var(--brandGray);
+        stroke-width: 1px;
+    }
+    #land-bare {
+        fill: var(--brandYellow);
+        stroke: var(--brandGray);
+        stroke-width: 1px;
+    }
+    #land-water {
+        fill: var(--brandLightBlue);
+        stroke: var(--brandGray);
+        stroke-width: 1px;
+    }
+    #land-nodata {
+        fill: var(--brandWhite);
+        stroke: var(--brandGray);
+        stroke-width: 1px;
+    }
+
+    .land-cover-text {
+        font-size: 16px;
+        fill: var(--brandDarkBlue);
+        font: 'Roboto', sans-serif
     }
     
 </style>
