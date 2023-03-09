@@ -40,6 +40,7 @@ main {
     border-bottom: solid 1px var(--brandDarkBlue);
     width: 100%;
     z-index: -50;
+    cursor: move;
 }
 
 #content-wrapper {

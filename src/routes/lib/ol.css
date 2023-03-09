@@ -211,16 +211,31 @@
 .ol-control button:focus {
   text-decoration: none;
   outline: 1px solid var(--ol-subtle-foreground-color);
-  color: var(--ol-foreground-color);
+  /* color: var(--ol-foreground-color); */
 }
 
 .ol-zoom .ol-zoom-in {
+  background-color: var(--brandDarkBlue);
+  color: var(--brandWhite);
+  border: solid 1px var(--brandWhite);
   border-radius: 2px 2px 0 0;
+  cursor: pointer;
 }
+.ol-zoom .ol-zoom-in:hover {
+  color: var(--brandLightBlue)
+} 
 
 .ol-zoom .ol-zoom-out {
+  background-color: var(--brandDarkBlue);
+  color: var(--brandWhite);
+  border: solid 1px var(--brandWhite);
   border-radius: 0 0 2px 2px;
+  cursor: pointer;
 }
+.ol-zoom .ol-zoom-out:hover {
+  color: var(--brandLightBlue)
+} 
+
 
 .ol-attribution {
   text-align: right;

@@ -256,6 +256,7 @@
         border: solid 1px var(--brandDarkBlue);
         border-top-left-radius: 0px;
         z-index: 1;
+        cursor: default;
     }
 
     h3 {
@@ -267,6 +268,7 @@
         margin-top: 3px;
         margin-bottom: 5px;
         border-bottom: 1px solid var(--brandDarkBlue);
+        cursor: text;
     }
 
     #land-cover {
@@ -309,7 +311,8 @@
     .land-cover-text {
         font-size: 16px;
         fill: var(--brandDarkBlue);
-        font: 'Roboto', sans-serif
+        font: 'Roboto', sans-serif;
+        cursor: text;
     }
     
 </style>
