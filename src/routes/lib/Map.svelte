@@ -1,5 +1,7 @@
 <script>
 
+    import './ol.css';
+
     import { onMount } from 'svelte';
 
     import notToronto from '../assets/ref/not-toronto.geo.json';
@@ -14,30 +16,28 @@
     import {get as getProjection} from 'ol/proj';
 	import {getWidth} from 'ol/extent';
 
+
     import {Fill, Stroke, Style, Text} from 'ol/style';
 
     import GeoJSON from 'ol/format/GeoJSON';
 	import VectorLayer from 'ol/layer/Vector';
 	import VectorSource from 'ol/source/Vector';
 
-    import ZoomSlider from 'ol/control/ZoomSlider';
 	import {defaults as defaultControls} from 'ol/control';
 	import {ScaleLine} from 'ol/control';
 
     // initial land cover layer
     var landCoverSource = new XYZ({
         url: "./historical-land-cover-toronto/1973/tiles/{z}/{x}/{y}.png"
-        // url: 'https://maps.library.utoronto.ca/tiles1947/{z}/{x}/{y}.png'
     });
     var landCoverLayer = new TileLayer({
         opacity: 1,
         source: landCoverSource
     });
 
-    // initial land cover layer
+    // local streets layer
     var smallStreetsSource = new XYZ({
         url: "./historical-land-cover-toronto/streets-local/{z}/{x}/{y}.png"
-        // url: 'https://maps.library.utoronto.ca/tiles1947/{z}/{x}/{y}.png'
     });
     var smallStreetsLayer = new TileLayer({
         minZoom: 14,
@@ -54,7 +54,7 @@
 	});
 	const style = new Style({
 		fill: new Fill({
-			color: '#ffffff',
+			color: '#FCFCFC',
 		}),
 		stroke: new Stroke({
 			color: '#1E3765',
@@ -65,7 +65,6 @@
 		source: vectorSource,
 		style: style
 	});
-
 
     // streets layer 2022ish
     var features = new GeoJSON().readFeatures(majorStreets, {
@@ -166,8 +165,10 @@
 				minZoom: 12,
 				extent: [-79.8302,43.3046,-78.9160,44.0295],
 			}),
-			controls: defaultControls().extend([new ZoomSlider()])
+			controls: defaultControls()
 		});
+
+        map.addControl(new ScaleLine({units: 'metric', maxWidth: 75}));
     
     });
 
@@ -178,15 +179,15 @@
 <div id="map"></div>
 
 
-
-
 <style>
+
+
 
     #map {
         height: 100%;
         width: 100%;
     }
-
+    
 
 </style>
 

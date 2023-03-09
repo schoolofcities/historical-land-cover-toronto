@@ -1,4 +1,3 @@
-@import '../../node_modules/ol/ol.css';
 
 @font-face {
     font-family: TradeGothicBold;
@@ -37,7 +36,6 @@ main {
 }
 
 #map-wrapper {
-    /* background-color: var(--brandRed); */
     height: calc(100vh - 22px);
     border-bottom: solid 1px var(--brandDarkBlue);
     width: 100%;
@@ -63,5 +61,6 @@ main {
     padding-left: 20px;
     padding-right: 20px;
 }
+
 
 
