@@ -24,6 +24,7 @@
 	import VectorSource from 'ol/source/Vector';
 
 	import {defaults as defaultControls} from 'ol/control';
+    import {defaults as defaultInteractions} from 'ol/interaction';
 	import {ScaleLine} from 'ol/control';
 
     // initial land cover layer
@@ -186,14 +187,17 @@
 			target: 'map',
 			layers: [landCoverLayer, notTorontoLayer, smallStreetsLayer, streetLayer, streetLabelLayer, sixLabelLayer],
 			view: new View({
-				center: [-79.38,43.70],
+				center: [-79.38,43.71],
                 rotation: 17 * Math.PI / 180,
-				zoom: 12.5,
+				zoom: 12,
 				maxZoom: 15,
 				minZoom: 12,
 				extent: [-79.8302,43.3046,-78.9160,44.0295],
 			}),
-			controls: defaultControls()
+			controls: defaultControls(),
+            interactions: defaultInteractions({
+                mouseWheelZoom: false,
+            }),
 		}).addControl(new ScaleLine({units: 'metric', maxWidth: 75}));
     
     });
@@ -230,8 +234,16 @@
             <rect id="land-nodata" width="15" height="15" x="130" y="22"/>
             <text x="148" y="36" class="land-cover-text">No Data</text>
 
+            <circle id="north-arrow-circle" cx="225" cy="28" r="10" />
+            <line id="north-arrow-line" x1='225' y1='28' x2='227' y2='22' transform='rotate' ></line>
+            <text x="225" y="14" rotate="17" class="land-cover-text">N</text>
+
         </svg>
 
+    </div>
+
+    <div id="years">
+        
     </div>
 
 </div>
@@ -313,10 +325,21 @@
     }
 
     .land-cover-text {
-        font-size: 16px;
+        font-size: 15px;
         fill: var(--brandDarkBlue);
         font-family: 'Tilt Neon', cursive;
         cursor: text;
+    }
+
+    #north-arrow-circle {
+        stroke: var(--brandDarkBlue);
+        stroke-width: 2px;
+        fill: none;
+    }
+    #north-arrow-line {
+        stroke: var(--brandDarkBlue);
+        stroke-width: 2px;
+        fill: none;
     }
     
 </style>

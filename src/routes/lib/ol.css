@@ -26,8 +26,8 @@
 .ol-scale-line {
   background: var(--ol-partial-background-color);
   border-radius: 4px;
-  bottom: 8px;
-  left: 38px;
+  top: 60px;
+  right: 38px;
   padding: 2px;
   position: absolute;
 }
@@ -139,8 +139,8 @@
 }
 
 .ol-zoom {
-  bottom: .5em;
-  left: .5em;
+  top: 60px;
+  right: .5em;
 }
 
 .ol-rotate {
