@@ -8,6 +8,7 @@
     import majorStreets from '../assets/ref/major-roads.geo.json';
     import labelStreets from '../assets/ref/major-streets-split.geo.json';
     import sixLabels from '../assets/ref/six-labels.geo.json';
+    import shoreline from '../assets/ref/shoreline.geo.json';
 
     import {Map, View} from 'ol';
     import XYZ from 'ol/source/XYZ';
@@ -138,6 +139,27 @@
 	});
 
 
+    // shoreline layer
+    var features = new GeoJSON().readFeatures(shoreline, {
+		});
+	var vectorSource = new VectorSource({
+		features
+	});
+	var shorelineStyle= new Style({
+        stroke: new Stroke({
+            color: '#1E3765',
+            width: 0.5
+        })
+    });
+	var shorelineLayer = new VectorLayer({
+		// declutter: true,
+		source: vectorSource,
+		style: function (feature) {
+        	return shorelineStyle;
+      	},		
+	});
+
+
     // six area labels
     var features = new GeoJSON().readFeatures(sixLabels, {
 		});
@@ -185,7 +207,7 @@
 
         map = new Map({
 			target: 'map',
-			layers: [landCoverLayer, notTorontoLayer, smallStreetsLayer, streetLayer, streetLabelLayer, sixLabelLayer],
+			layers: [landCoverLayer, notTorontoLayer, smallStreetsLayer, streetLayer, streetLabelLayer, shorelineLayer, sixLabelLayer],
 			view: new View({
 				center: [-79.38,43.71],
                 rotation: 17 * Math.PI / 180,
