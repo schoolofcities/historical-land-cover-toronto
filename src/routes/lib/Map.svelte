@@ -155,7 +155,6 @@
 
         map = new Map({
 			target: 'map',
-			// layers: [leftLayer, rightLayer, notTorontoLayer, streetLayer],
 			layers: [landCoverLayer, notTorontoLayer, smallStreetsLayer, streetLayer, streetLabelLayer],
 			view: new View({
 				center: [-79.38,43.70],
@@ -166,29 +165,40 @@
 				extent: [-79.8302,43.3046,-78.9160,44.0295],
 			}),
 			controls: defaultControls()
-		});
-
-        map.addControl(new ScaleLine({units: 'metric', maxWidth: 75}));
+		}).addControl(new ScaleLine({units: 'metric', maxWidth: 75}));
     
     });
 
 </script>
 
 
+<div id="legend">
+
+
+</div>
 
 <div id="map"></div>
 
 
 <style>
 
-
-
     #map {
         height: 100%;
         width: 100%;
     }
-    
 
+    #legend {
+        position: absolute;
+        top: calc(100vh - 250px);
+        right: 10px;
+        height: 213px;
+        width: 300px;
+        background-color: var(--brandWhite);
+        border: solid 1px var(--brandDarkBlue);
+        border-top-left-radius: 50px;
+        z-index: 1;
+    }
+    
 </style>
 
 

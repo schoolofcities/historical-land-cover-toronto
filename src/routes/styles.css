@@ -18,7 +18,7 @@
     --brandYellow: #F1C500;
     --brandBlack: #000000;
     --brandWhite: #ffffff;
-    --brandGay: #D0D1C9;
+    --brandGray: #D0D1C9;
 }
 
 body {
@@ -39,6 +39,12 @@ main {
     height: calc(100vh - 22px);
     border-bottom: solid 1px var(--brandDarkBlue);
     width: 100%;
+    z-index: -50;
+}
+
+#content-wrapper {
+    background-color: var(--brandWhite);
+    z-index: 99;
 }
 
 .arrow {
