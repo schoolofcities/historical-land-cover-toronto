@@ -146,7 +146,7 @@
 	var textSixStyleLabels = new Style({
             text: new Text({
                 declutter: true,
-                font: 'bold italic 20px "Roboto", "Arial Unicode MS", "sans-serif"',
+                font: '20px "Tilt Neon", cursive',
                 placement: 'point',
                 scale: 1,
                 fill: new Fill({
@@ -252,23 +252,27 @@
         right: 10px;
         height: 213px;
         width: 300px;
-        background-color: rgba(255, 255, 255, 0.90);
+        background-color: rgba(255, 255, 255, 0.95);
         border: solid 1px var(--brandDarkBlue);
-        border-top-left-radius: 0px;
+        border-radius: 5px;
         z-index: 1;
         cursor: default;
     }
 
     h3 {
-        font-family: TradeGothicBold;
-        font-size: 22px;
-        background-color: var(--brandDarkBlue);;
-        color: var(--brandWhite);
+        font-family: 'Tilt Neon', cursive;
+        font-weight: normal;
+        height: 25px;
+        font-size: 21px;
+        background-color:  var(--brandWhite);
+        color: var(--brandDarkBlue);
         padding-left: 10px;
-        margin-top: 3px;
+        margin-top: 5px;
         margin-bottom: 5px;
-        border-bottom: 1px solid var(--brandDarkBlue);
+        border-bottom: 2px solid var(--brandDarkBlue);
+        border-top: 2px solid var(--brandDarkBlue);
         cursor: text;
+        padding-bottom: 1px;
     }
 
     #land-cover {
@@ -311,7 +315,7 @@
     .land-cover-text {
         font-size: 16px;
         fill: var(--brandDarkBlue);
-        font: 'Roboto', sans-serif;
+        font-family: 'Tilt Neon', cursive;
         cursor: text;
     }
     
