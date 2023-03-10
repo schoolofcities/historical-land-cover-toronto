@@ -293,6 +293,7 @@
     <div id="years">
 
         <button class="year-button" on:click={() => yearSelect("1954")}>1954</button>
+        
         <button class="year-button" on:click={() => yearSelect("1973")}>1973</button>
 
     </div>
@@ -391,6 +392,28 @@
         stroke: var(--brandDarkBlue);
         stroke-width: 2px;
         fill: none;
+    }
+
+    #years {
+        margin: 10px;
+    }
+
+    .year-button {
+        background-color: var(--brandDarkBlue);
+        color: var(--brandWhite);
+        font-family: 'Tilt Neon', cursive;
+        font-size: 15px;
+        height: 25px;
+        width: 40px;
+        border: solid 1px var(--brandGray);
+        border-radius: 0px;
+        cursor: pointer;
+        opacity: 1;
+    }
+
+    .year-button:hover {
+        border: solid 2px var(--brandLightBlue);
+        opacity: 1;
     }
     
 </style>
