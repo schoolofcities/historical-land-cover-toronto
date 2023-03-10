@@ -291,10 +291,25 @@
     </div>
 
     <div id="years">
-
-        <button class="year-button" on:click={() => yearSelect("1954")}>1954</button>
         
-        <button class="year-button" on:click={() => yearSelect("1973")}>1973</button>
+        <button class:selected="{year === '1939'}"  on:click={() => yearSelect("1939")}>1939</button>
+        
+        <button class:selected="{year === '1947'}" on:click={() => yearSelect("1947")}>1947</button>
+
+        <button class:selected="{year === '1954'}" on:click={() => yearSelect("1954")}>1954</button>
+
+        <button class:selected="{year === '1966'}"  on:click={() => yearSelect("1966")}>1966</button>
+        
+        <button class:selected="{year === '1973'}" on:click={() => yearSelect("1973")}>1973</button>
+
+        <button class:selected="{year === '1982'}" on:click={() => yearSelect("1982")}>1982</button>
+
+        <button class:selected="{year === '1994'}"  on:click={() => yearSelect("1994")}>1994</button>
+        
+        <button class:selected="{year === '2006'}" on:click={() => yearSelect("2006")}>2006</button>
+
+        <button class:selected="{year === '2017'}" on:click={() => yearSelect("2017")}>2017</button>
+
 
     </div>
 
@@ -395,26 +410,35 @@
     }
 
     #years {
-        margin: 10px;
+        margin: 8px;
     }
 
-    .year-button {
+    .selected {
+        opacity: 1;
+        border: solid 2px var(--brandLightBlue);
+        border-radius: 0px;
+    }
+
+    button {
         background-color: var(--brandDarkBlue);
         color: var(--brandWhite);
         font-family: 'Tilt Neon', cursive;
         font-size: 15px;
         height: 25px;
-        width: 40px;
-        border: solid 1px var(--brandGray);
+        width: 44px;
+        border: solid 2px var(--brandWhite);
         border-radius: 0px;
         cursor: pointer;
-        opacity: 1;
+        margin-bottom: 4px;
+        opacity: 0.5;
     }
 
-    .year-button:hover {
+    button:hover {
         border: solid 2px var(--brandLightBlue);
         opacity: 1;
     }
+
+    
     
 </style>
 
