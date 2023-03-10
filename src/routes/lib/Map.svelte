@@ -27,6 +27,12 @@
 	import {defaults as defaultControls} from 'ol/control';
     import {defaults as defaultInteractions} from 'ol/interaction';
 	import {ScaleLine} from 'ol/control';
+    
+
+    let map = 0;
+    let load = 0;
+    let year = "1973";
+
 
     // initial land cover layer
     var landCoverSource = new XYZ({
@@ -203,7 +209,11 @@
 		resolutions[i] = maxResolution / Math.pow(2, i);
 	}
 
+    
+
     onMount(() => {
+
+        load = 1;
 
         map = new Map({
 			target: 'map',
@@ -220,9 +230,25 @@
             interactions: defaultInteractions({
                 mouseWheelZoom: false,
             }),
-		}).addControl(new ScaleLine({units: 'metric', maxWidth: 75}));
+		})
+        
+        map.addControl(new ScaleLine({units: 'metric', maxWidth: 75}));
     
     });
+
+    function yearSelect(y) {
+        year = y
+	};
+
+    function layerSwitch() {
+        if (load > 0) {
+            landCoverLayer.setSource(new XYZ({
+                url: "./historical-land-cover-toronto/" + year + "/tiles/{z}/{x}/{y}.png"
+            }))
+        }
+    }
+
+    $: year && layerSwitch()
 
 </script>
 
@@ -265,7 +291,10 @@
     </div>
 
     <div id="years">
-        
+
+        <button class="year-button" on:click={() => yearSelect("1954")}>1954</button>
+        <button class="year-button" on:click={() => yearSelect("1973")}>1973</button>
+
     </div>
 
 </div>
