@@ -1,6 +1,7 @@
 <script>
 
 	import Top from "./lib/TopSofC.svelte";
+	import Construction from "./lib/Construction.svelte";
 	import Map from "./lib/Map.svelte";
 	import './styles.css';
 
@@ -49,6 +50,8 @@
 	<div id="map-wrapper">
 		<Map/>
 	</div>
+
+	<Construction/>
 
 	<div id="content-wrapper">
 

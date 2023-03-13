@@ -37,7 +37,7 @@ main {
 }
 
 #map-wrapper {
-    height: calc(100vh - 22px);
+    height: calc(100vh - 25px);
     border-bottom: solid 1px var(--brandDarkBlue);
     width: 100%;
     z-index: -50;
