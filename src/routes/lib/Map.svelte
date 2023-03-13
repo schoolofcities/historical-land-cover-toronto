@@ -32,6 +32,7 @@
     let map = 0;
     let load = 0;
     let year = "1973";
+    let streets = "on";
 
 
     // initial land cover layer
@@ -250,6 +251,27 @@
 
     $: year && layerSwitch()
 
+    function streetSelect() {
+        if (streets === "on") {
+            streets = "off"
+        } else {
+            streets = "on"
+        }
+    }
+
+    function toggleStreets() {
+        if (streets) {
+            console.log(streets)
+        } else {
+            console.log("meow")
+        }
+        
+    }
+
+    $: streets && toggleStreets()
+
+    
+
 </script>
 
 
@@ -310,8 +332,12 @@
 
         <button class:selected="{year === '2017'}" on:click={() => yearSelect("2017")}>2017</button>
 
-
     </div>
+
+    <label>
+        <input type=checkbox on:click={streetSelect} checked>
+        Toggle Streets (2022 Data)
+    </label>
 
 </div>
 
