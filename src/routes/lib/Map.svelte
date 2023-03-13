@@ -464,6 +464,23 @@
         opacity: 1;
     }
 
+    label {
+        color: var(--brandDarkBlue);
+        background-color: var(--brandWhite);
+        font-family: 'Tilt Neon', cursive;
+        font-size: 15px;
+        border-top: solid 1px var(--brandDarkBlue);
+        width: 100%;
+        padding-top: 5px;
+        padding-left: 5px;
+        cursor: pointer;
+    }
+
+    input[type='checkbox']:checked {
+        accent-color: var(--brandDarkBlue);
+        border-color: white;
+    }
+
     
     
 </style>
