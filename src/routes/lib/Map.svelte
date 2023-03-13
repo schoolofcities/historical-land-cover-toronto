@@ -369,7 +369,7 @@
 
     #legend {
         position: absolute;
-        top: calc(100vh - 205px);
+        top: calc(100vh - 208px);
         right: 10px;
         height: 170px;
         width: 300px;
