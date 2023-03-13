@@ -237,6 +237,9 @@
     
     });
 
+
+    // toggling the land cover layer by year
+
     function yearSelect(y) {
         year = y
 	};
@@ -251,6 +254,9 @@
 
     $: year && layerSwitch()
 
+
+    // toggle streets (2022) on and off
+
     function streetSelect() {
         if (streets === "on") {
             streets = "off"
@@ -260,10 +266,16 @@
     }
 
     function toggleStreets() {
-        if (streets) {
-            console.log(streets)
-        } else {
-            console.log("meow")
+        if (load > 0) {
+            if (streets === "on") {
+                streetLayer.setOpacity(1);
+                smallStreetsLayer.setOpacity(1);
+                streetLabelLayer.setOpacity(1);
+            } else {
+                streetLayer.setOpacity(0);
+                smallStreetsLayer.setOpacity(0);
+                streetLabelLayer.setOpacity(0);
+            }
         }
         
     }
@@ -481,8 +493,4 @@
         border-color: white;
     }
 
-    
-    
 </style>
-
-
