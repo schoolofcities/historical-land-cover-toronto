@@ -25,6 +25,7 @@ body {
     padding: 0px;
     margin: 0px;
     background-color: var(--brandWhite);
+    min-width: 350px;
 }
 
 main {

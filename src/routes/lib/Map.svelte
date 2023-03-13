@@ -346,14 +346,18 @@
 
     </div>
 
-    <label>
-        <input type=checkbox on:click={streetSelect} checked>
-        Toggle Streets (2022 Data)
-    </label>
+    <div id="toggle-streets-wrapper">
+        <label>
+            <input type=checkbox on:click={streetSelect} checked>
+            Toggle Streets (2022 Data)
+        </label>
+    </div>
 
 </div>
 
 <div id="map"></div>
+
+
 
 
 <style>
@@ -365,9 +369,9 @@
 
     #legend {
         position: absolute;
-        top: calc(100vh - 250px);
+        top: calc(100vh - 205px);
         right: 10px;
-        height: 213px;
+        height: 170px;
         width: 300px;
         background-color: rgba(255, 255, 255, 0.95);
         border: solid 1px var(--brandDarkBlue);
@@ -476,14 +480,20 @@
         opacity: 1;
     }
 
+    #toggle-streets-wrapper {
+        border-top: solid 1px var(--brandDarkBlue);
+        width: 300px;
+        padding-top: 3px;
+    }
+
+    #toggle-streets-wrapper:hover {
+        opacity: 0.84;
+    }
+
     label {
         color: var(--brandDarkBlue);
-        background-color: var(--brandWhite);
         font-family: 'Tilt Neon', cursive;
         font-size: 15px;
-        border-top: solid 1px var(--brandDarkBlue);
-        width: 100%;
-        padding-top: 5px;
         padding-left: 5px;
         cursor: pointer;
     }
