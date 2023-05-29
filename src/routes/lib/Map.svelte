@@ -224,7 +224,7 @@
                 rotation: 17 * Math.PI / 180,
 				zoom: 12,
 				maxZoom: 15,
-				minZoom: 12,
+				minZoom: 11,
 				extent: [-79.8302,43.3046,-78.9160,44.0295],
 			}),
 			controls: defaultControls(),

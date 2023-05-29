@@ -1,9 +1,21 @@
 <script>
 
+	import { afterUpdate } from 'svelte';
 	import Top from "./lib/TopSofC.svelte";
 	import Construction from "./lib/Construction.svelte";
 	import Map from "./lib/Map.svelte";
 	import './styles.css';
+
+	function shiftDown() {
+		window.scrollTo({
+		top: window.pageYOffset + 300,
+		behavior: 'smooth'
+		});
+	}
+
+	afterUpdate(() => {
+		window.scrollTo(0, window.pageYOffset);
+	});
 
 </script>
 
@@ -55,7 +67,7 @@
 
 	<div id="content-wrapper">
 
-		<div class="arrow">
+		<div class="arrow" on:click={shiftDown}>
 			<p>▼</p>
 		</div>
 

@@ -55,7 +55,16 @@ main {
     margin-top: -16px;
     text-align: center;
     color: var(--brandDarkBlue);
+    cursor: pointer;
+    border-bottom: solid 1px var(--brandDarkBlue);
+    height: 23px;
 }
+.arrow:hover {
+    color: var(--brandMedGreen)
+}
+
+
+
 
 .text {
     max-width: 720px;
