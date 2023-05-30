@@ -55,7 +55,26 @@
         source: smallStreetsSource
     });
 
-    // not Toronto layer
+
+
+    // not Toronto layer - include a background pattern with canvas
+
+    const canvas = document.createElement('canvas');
+    const context = canvas.getContext('2d');
+    canvas.width = 5;
+    canvas.height = 5;
+
+    context.fillStyle = 'white'; // Fill color
+    context.fillRect(0, 0, 5, 5);
+    context.strokeStyle = '#D0D1C9'; // Stroke color
+    context.lineWidth = 1;
+    context.beginPath();
+    context.moveTo(2, 3);
+    context.lineTo(3, 2);
+    context.stroke();
+
+    const pattern = context.createPattern(canvas, 'repeat');
+
     var features = new GeoJSON().readFeatures(notToronto, {
 		});
 	var vectorSource = new VectorSource({
@@ -63,7 +82,7 @@
 	});
 	const style = new Style({
 		fill: new Fill({
-			color: '#FCFCFC',
+			color: pattern,
 		}),
 		stroke: new Stroke({
 			color: '#1E3765',
@@ -196,6 +215,9 @@
         	return textSixStyleLabels;
       	},		
 	});
+
+
+
 
 
 
