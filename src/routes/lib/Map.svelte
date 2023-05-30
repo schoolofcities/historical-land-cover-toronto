@@ -369,13 +369,13 @@
 
     #legend {
         position: absolute;
-        top: calc(100vh - 208px);
+        top: calc(100vh - 206px);
         right: 10px;
         height: 170px;
         width: 300px;
         background-color: rgba(255, 255, 255, 0.95);
         border: solid 1px var(--brandDarkBlue);
-        border-radius: 5px;
+        border-radius: 3px;
         z-index: 1;
         cursor: default;
     }

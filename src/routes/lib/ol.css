@@ -174,10 +174,10 @@
   color: var(--ol-subtle-foreground-color);
   font-weight: bold;
   text-decoration: none;
-  font-size: inherit;
+  font-size: 22px;
   text-align: center;
-  height: 1.375em;
-  width: 1.375em;
+  height: 33px;
+  width: 33px;
   line-height: .4em;
   background-color: var(--ol-background-color);
   border: none;
