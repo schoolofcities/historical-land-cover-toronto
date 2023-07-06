@@ -6,16 +6,22 @@ Installing and running locally:
 git clone https://github.com/schoolofcities/historical-land-cover-toronto
 cd historical-land-cover-toronto
 npm install
+```
+
+View dev in browser
+
+```
 npm run dev
 ```
 
-Building
+
+Building:
 
 ```
 npm run build
 ```
 
-Previewing the build
+Previewing the build:
 
 ```
 npm run preview
