@@ -350,7 +350,7 @@
         
         <button class:selected="{year === '1939'}"  on:click={() => yearSelect("1939")}>1939</button>
         
-        <!-- <button class:selected="{year === '1947'}" on:click={() => yearSelect("1947")}>1947</button> -->
+        <button class:selected="{year === '1947'}" on:click={() => yearSelect("1947")}>1947</button>
 
         <button class:selected="{year === '1954'}" on:click={() => yearSelect("1954")}>1954</button>
 
@@ -360,7 +360,7 @@
 
         <!-- <button class:selected="{year === '1982'}" on:click={() => yearSelect("1982")}>1982</button> -->
 
-        <!-- <button class:selected="{year === '1994'}"  on:click={() => yearSelect("1994")}>1994</button> -->
+        <button class:selected="{year === '1995'}"  on:click={() => yearSelect("1995")}>1995</button>
         
         <!-- <button class:selected="{year === '2006'}" on:click={() => yearSelect("2006")}>2006</button> -->
 
