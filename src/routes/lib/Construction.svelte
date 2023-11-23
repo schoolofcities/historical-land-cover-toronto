@@ -10,8 +10,8 @@
         margin-left: 20px; 
         top: 0px;
         max-width: 300px;
-		background-color: var(--brandYellow);
-		border: 3px dashed var(--brandRed);
+		background-color: var(--brandWhite);
+		border: 3px solid var(--brandYellow);
 		text-align: center;
 		font-weight: bold;
         z-index: 999999;
