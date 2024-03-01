@@ -426,12 +426,12 @@
         border-bottom: 1px solid var(--brandDarkBlue);
     }
     #land-built {
-        fill: var(--brandRed);
+        fill: var(--brandYellow);
         stroke: var(--brandGray);
         stroke-width: 1px;
     }
     #land-grass {
-        fill: var(--brandLightGreen);
+        fill: var(--brandMedGreen);
         stroke: var(--brandGray);
         stroke-width: 1px;
     }
@@ -441,7 +441,7 @@
         stroke-width: 1px;
     }
     #land-bare {
-        fill: var(--brandYellow);
+        fill: var(--brandGray);
         stroke: var(--brandGray);
         stroke-width: 1px;
     }
