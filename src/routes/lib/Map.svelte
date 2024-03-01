@@ -31,13 +31,13 @@
 
     let map = 0;
     let load = 0;
-    let year = "1973";
+    let year = "1947";
     let streets = "on";
 
 
     // initial land cover layer
     var landCoverSource = new XYZ({
-        url: "./historical-land-cover-toronto/1973/tiles/{z}/{x}/{y}.png"
+        url: "./historical-land-cover-toronto/" + year + "/tiles/{z}/{x}/{y}.png"
     });
     var landCoverLayer = new TileLayer({
         opacity: 1,
@@ -121,6 +121,7 @@
 		});
 	var streetLayer = new VectorLayer({
 		declutter: true,
+        opacity: 0.75,
 		source: vectorSource,
 		style: function (feature) {
 			textStyle.getText().setText(feature.get('n'));
@@ -290,7 +291,7 @@
     function toggleStreets() {
         if (load > 0) {
             if (streets === "on") {
-                streetLayer.setOpacity(1);
+                streetLayer.setOpacity(0.75);
                 smallStreetsLayer.setOpacity(1);
                 streetLabelLayer.setOpacity(1);
             } else {
