@@ -46,7 +46,7 @@
 
     // local streets layer
     var smallStreetsSource = new XYZ({
-        url: "./historical-land-cover-toronto/streets-local/{z}/{x}/{y}.png"
+        url: "./streets-local/{z}/{x}/{y}.png"
     });
     var smallStreetsLayer = new TileLayer({
         minZoom: 14,
@@ -196,7 +196,7 @@
 	var textSixStyleLabels = new Style({
             text: new Text({
                 declutter: true,
-                font: '20px "Tilt Neon", cursive',
+                font: '20px "TradeGothicBold"',
                 placement: 'point',
                 scale: 1,
                 fill: new Fill({
@@ -404,7 +404,7 @@
     }
 
     h3 {
-        font-family: 'Tilt Neon', cursive;
+        font-family: 'TradeGothicBold', sans-serif;
         font-weight: normal;
         height: 25px;
         font-size: 21px;
@@ -459,7 +459,7 @@
     .land-cover-text {
         font-size: 15px;
         fill: var(--brandDarkBlue);
-        font-family: 'Tilt Neon', cursive;
+        font-family: 'Roboto', sans-serif;
         cursor: text;
     }
 
@@ -487,8 +487,8 @@
     button {
         background-color: var(--brandDarkBlue);
         color: var(--brandWhite);
-        font-family: 'Tilt Neon', cursive;
-        font-size: 15px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 13px;
         height: 25px;
         width: 44px;
         border: solid 2px var(--brandWhite);
@@ -515,7 +515,7 @@
 
     label {
         color: var(--brandDarkBlue);
-        font-family: 'Tilt Neon', cursive;
+        font-family: 'Roboto', sans-serif;
         font-size: 15px;
         padding-left: 5px;
         cursor: pointer;
