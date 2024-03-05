@@ -221,8 +221,6 @@
 
 
 
-
-
     useGeographic();
 	const resolutions = [];
 	const matrixIds = [];
@@ -311,74 +309,74 @@
 
 
 
+<div id="map">
 
+    <div id="legend">
 
-<div id="legend">
+        <h3>Historical Land-Cover Toronto</h3>
 
-    <h3>Historical Land-Cover Toronto</h3>
+        <div id="land-cover">
 
-    <div id="land-cover">
+            <svg class="" height="45" width="300">
 
-        <svg class="" height="45" width="300">
+                <rect id="land-built" width="15" height="15" x="1" y="1"/>
+                <text x="19" y="15" class="land-cover-text">Built</text>
 
-            <rect id="land-built" width="15" height="15" x="1" y="1"/>
-            <text x="19" y="15" class="land-cover-text">Built</text>
+                <rect id="land-grass" width="15" height="15" x="61" y="1"/>
+                <text x="79" y="15" class="land-cover-text">Grass</text>
 
-            <rect id="land-grass" width="15" height="15" x="61" y="1"/>
-            <text x="79" y="15" class="land-cover-text">Grass</text>
+                <rect id="land-forest" width="15" height="15" x="130" y="1"/>
+                <text x="148" y="15" class="land-cover-text">Forest</text>
 
-            <rect id="land-forest" width="15" height="15" x="130" y="1"/>
-            <text x="148" y="15" class="land-cover-text">Forest</text>
+                <rect id="land-bare" width="15" height="15" x="1" y="22"/>
+                <text x="19" y="36" class="land-cover-text">Bare</text>
 
-            <rect id="land-bare" width="15" height="15" x="1" y="22"/>
-            <text x="19" y="36" class="land-cover-text">Bare</text>
+                <rect id="land-water" width="15" height="15" x="61" y="22"/>
+                <text x="79" y="36" class="land-cover-text">Water</text>
 
-            <rect id="land-water" width="15" height="15" x="61" y="22"/>
-            <text x="79" y="36" class="land-cover-text">Water</text>
+                <rect id="land-nodata" width="15" height="15" x="130" y="22"/>
+                <text x="148" y="36" class="land-cover-text">No Data</text>
 
-            <rect id="land-nodata" width="15" height="15" x="130" y="22"/>
-            <text x="148" y="36" class="land-cover-text">No Data</text>
+                <circle id="north-arrow-circle" cx="225" cy="28" r="10" />
+                <line id="north-arrow-line" x1='225' y1='28' x2='227' y2='22' transform='rotate' ></line>
+                <text x="225" y="14" rotate="17" class="land-cover-text">N</text>
 
-            <circle id="north-arrow-circle" cx="225" cy="28" r="10" />
-            <line id="north-arrow-line" x1='225' y1='28' x2='227' y2='22' transform='rotate' ></line>
-            <text x="225" y="14" rotate="17" class="land-cover-text">N</text>
+            </svg>
 
-        </svg>
+        </div>
 
-    </div>
+        <div id="years">
+            
+            <button class:selected="{year === '1939'}"  on:click={() => yearSelect("1939")}>1939</button>
+            
+            <button class:selected="{year === '1947'}" on:click={() => yearSelect("1947")}>1947</button>
 
-    <div id="years">
-        
-        <button class:selected="{year === '1939'}"  on:click={() => yearSelect("1939")}>1939</button>
-        
-        <button class:selected="{year === '1947'}" on:click={() => yearSelect("1947")}>1947</button>
+            <button class:selected="{year === '1954'}" on:click={() => yearSelect("1954")}>1954</button>
 
-        <button class:selected="{year === '1954'}" on:click={() => yearSelect("1954")}>1954</button>
+            <!-- <button class:selected="{year === '1966'}"  on:click={() => yearSelect("1966")}>1966</button> -->
+            
+            <button class:selected="{year === '1973'}" on:click={() => yearSelect("1973")}>1973</button>
 
-        <!-- <button class:selected="{year === '1966'}"  on:click={() => yearSelect("1966")}>1966</button> -->
-        
-        <button class:selected="{year === '1973'}" on:click={() => yearSelect("1973")}>1973</button>
+            <!-- <button class:selected="{year === '1982'}" on:click={() => yearSelect("1982")}>1982</button> -->
 
-        <!-- <button class:selected="{year === '1982'}" on:click={() => yearSelect("1982")}>1982</button> -->
+            <button class:selected="{year === '1995'}"  on:click={() => yearSelect("1995")}>1995</button>
+            
+            <!-- <button class:selected="{year === '2006'}" on:click={() => yearSelect("2006")}>2006</button> -->
 
-        <button class:selected="{year === '1995'}"  on:click={() => yearSelect("1995")}>1995</button>
-        
-        <!-- <button class:selected="{year === '2006'}" on:click={() => yearSelect("2006")}>2006</button> -->
+            <button class:selected="{year === '2017'}" on:click={() => yearSelect("2017")}>2017</button>
 
-        <button class:selected="{year === '2017'}" on:click={() => yearSelect("2017")}>2017</button>
+        </div>
 
-    </div>
+        <div id="toggle-streets-wrapper">
+            <label>
+                <input type=checkbox on:click={streetSelect} checked>
+                Toggle Streets (2022 Data)
+            </label>
+        </div>
 
-    <div id="toggle-streets-wrapper">
-        <label>
-            <input type=checkbox on:click={streetSelect} checked>
-            Toggle Streets (2022 Data)
-        </label>
     </div>
 
 </div>
-
-<div id="map"></div>
 
 
 
@@ -386,20 +384,26 @@
 <style>
 
     #map {
-        height: 100%;
+        position: relative;
         width: 100%;
+        height: calc(100vh - 150px);
+        border-bottom: solid 1px var(--brandDarkBlue);
+        border-top: solid 1px var(--brandDarkBlue);
+        width: 100%;
+        z-index: 1;
+        cursor: move;
     }
 
     #legend {
         position: absolute;
-        top: calc(100vh - 206px);
+        bottom: 10px;
         right: 10px;
         height: 170px;
         width: 300px;
         background-color: rgba(255, 255, 255, 0.95);
         border: solid 1px var(--brandDarkBlue);
         border-radius: 3px;
-        z-index: 1;
+        z-index: 2;
         cursor: default;
     }
 

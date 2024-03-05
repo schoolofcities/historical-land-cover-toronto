@@ -52,44 +52,14 @@ main {
     position: relative;
 }
 
-#map-wrapper {
-    height: calc(100vh - 25px);
-    border-bottom: solid 1px var(--brandDarkBlue);
-    width: 100%;
-    z-index: -50;
-    cursor: move;
-}
-
-#content-wrapper {
-    background-color: var(--brandWhite);
-    z-index: 99;
-}
-
-.arrow {
-    width: 100%;
-    margin: 0 auto;
-    margin-top: -16px;
-    text-align: center;
-    color: var(--brandDarkBlue);
-    cursor: pointer;
-    border-bottom: solid 1px var(--brandDarkBlue);
-    height: 23px;
-}
-.arrow:hover {
-    color: var(--brandMedGreen)
-}
-
-
-
-
-title {
+.title {
     background-color: none;
     max-width: 600px;
     margin: 0 auto;
-    margin-top: 25px;
+    margin-top: 125px;
     margin-bottom: 0px;
-    border-bottom: solid 1px var(--brandBlack);
     position: relative;
+    border-bottom: solid 1px var(--brandBlack);
 }
 
 .text {
@@ -114,8 +84,7 @@ h1 {
 h2 {
     text-align: left;
     font-family: TradeGothicBold;
-    font-size: 22px;
-    border-bottom: solid 1px var(--brandBlack);
+    font-size: 29.5px;
     margin-top: 0px;
     color: var(--brandBlack);
 }
