@@ -2,25 +2,35 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" href="/historical-land-cover-toronto/favicon.svg" />
+		<link rel="icon" href="./favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
-		<meta http-equiv="content-security-policy" content="">
-		<link rel="modulepreload" href="/historical-land-cover-toronto/_app/immutable/start-c9b3a74d.js">
-		<link rel="modulepreload" href="/historical-land-cover-toronto/_app/immutable/chunks/index-9d30f94e.js">
-		<link rel="modulepreload" href="/historical-land-cover-toronto/_app/immutable/chunks/singletons-d2bdb8ea.js">
+		
+		<link rel="modulepreload" href="./_app/immutable/entry/start.5c86556e.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/scheduler.e108d1fd.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/singletons.8a429583.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/app.ccd3bda1.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index.3559ff65.js">
 	</head>
 	<body>
 		<div>
-		<script type="module" data-sveltekit-hydrate="45h">
-			import { start } from "/historical-land-cover-toronto/_app/immutable/start-c9b3a74d.js";
+			<script>
+				{
+					__sveltekit_p0k3mh = {
+						assets: "/historical-land-cover-toronto",
+						base: new URL(".", location).pathname.slice(0, -1),
+						env: {}
+					};
 
-			start({
-				env: {},
-				hydrate: null,
-				paths: {"base":"/historical-land-cover-toronto","assets":"/historical-land-cover-toronto"},
-				target: document.querySelector('[data-sveltekit-hydrate="45h"]').parentNode,
-				trailing_slash: "never"
-			});
-		</script></div>
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("./_app/immutable/entry/start.5c86556e.js"),
+						import("./_app/immutable/entry/app.ccd3bda1.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element);
+					});
+				}
+			</script>
+		</div>
 	</body>
 </html>

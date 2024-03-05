@@ -2,11 +2,11 @@
 
 	import { afterUpdate } from 'svelte';
 
-	import Top from "./lib/TopSofC.svelte";
-	import Construction from "./lib/Construction.svelte";
-	import Map from "./lib/Map.svelte";
+	import Top from "../lib/TopSofC.svelte";
+	import Construction from "../lib/Construction.svelte";
+	import Map from "../lib/Map.svelte";
 	
-	import './styles.css';
+	import '../assets/styles.css';
 
 	function shiftDown() {
 		window.scrollTo({
