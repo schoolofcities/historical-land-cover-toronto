@@ -154,10 +154,10 @@
     const neighbourhoodStyles = function(feature) {
         let color = "grey";
         if (feature.get('AREA_SHORT_CODE') >= 50) {color = '#0d534d' ;}
-        else if (feature.get('AREA_SHORT_CODE') >= 25 ){color ='#5b8985';}
+        else if (feature.get('AREA_SHORT_CODE') >= 30 ){color ='#5b8985';}
         else if (feature.get('AREA_SHORT_CODE') >= 10 ){color ='#a0b9b7';}
         else if (feature.get('AREA_SHORT_CODE') >= -10 ){color ='#f2f2f2';}
-        else if (feature.get('AREA_SHORT_CODE') >= -25 ){color ='#f1da71';}
+        else if (feature.get('AREA_SHORT_CODE') >= -30 ){color ='#f1da71';}
         else if (feature.get('AREA_SHORT_CODE') >= -50 ){color ='#f1c500';}
         else {color = '#d18100';}
 
@@ -278,7 +278,7 @@
 				center: [-79.38,43.71],
                 rotation: 17 * Math.PI / 180,
 				zoom: 11.2,
-				maxZoom: 15,
+				maxZoom: 15.2,
 				minZoom: 10,
 				extent: [-79.8302,43.3046,-78.9160,44.0295],
 			}),
@@ -317,10 +317,10 @@
         <rect x="40" y="25" width="39" height="15" fill="#f1c500" stroke="#FFFFFF" stroke-width="1"/>
         <rect x="0" y="25" width="39" height="15" fill="#d18100" stroke="#FFFFFF" stroke-width="1"/>
         <text id="legend-label" x="24" y="55">-50%</text>
-        <text id="legend-label" x="64" y="55">-25%</text>
+        <text id="legend-label" x="64" y="55">-30%</text>
         <text id="legend-label" x="104" y="55">-10%</text>
         <text id="legend-label" x="150" y="55">10%</text>
-        <text id="legend-label" x="190" y="55">25%</text>
+        <text id="legend-label" x="190" y="55">30%</text>
         <text id="legend-label" x="230" y="55">50%</text>
     </svg>
 </div>
