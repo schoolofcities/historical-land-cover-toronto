@@ -1,0 +1,123 @@
+
+@font-face {
+    font-family: TradeGothicBold;
+    src: url("./Trade Gothic LT Bold.ttf");
+}
+
+@font-face {
+    font-family: RobotoRegular;
+    src: url("roboto/Roboto-Regular.ttf");
+}
+
+@font-face {
+    font-family: RobotoBold;
+    src: url("roboto/Roboto-Bold.ttf");
+}
+
+@font-face {
+    font-family: SourceSerif;
+    src: url("source-serif-pro/SourceSerifPro-Regular.otf");
+}
+
+
+:root {
+    font-family: Roboto, sans-serif;
+    --brandDarkBlue: #1E3765;
+    --brandMedBlue: #007FA3;
+    --brandLightBlue: #6FC7EA;
+    --brandPurple: #6D247A;
+    --brandPink: #AB1368;
+    --brandDarkGreen: #0D534D;
+    --brandMedGreen: #00A189;
+    --brandLightGreen: #8DBF2E;
+    --brandRed: #DC4633; 
+    --brandYellow: #F1C500;
+    --brandBlack: #000000;
+    --brandWhite: #ffffff;
+    --brandGray: #D0D1C9;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+    background-color: var(--brandWhite);
+    min-width: 350px;
+}
+
+main {
+    margin: 0 auto;
+    width: 100%;
+    min-width: 320px;
+    max-width: 100%;
+    position: relative;
+}
+
+.title {
+    background-color: none;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 125px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 0px;
+    position: relative;
+    border-bottom: solid 1px var(--brandBlack);
+}
+
+.text {
+    background-color: none;
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+h1 {
+    font-family: TradeGothicBold;
+    font-size: 42px;
+    color: var(--brandDarkBlue);
+    border-bottom: solid 1px var(--brandGray);
+    text-decoration: none;
+    margin-bottom: 10px;
+    padding: 0px;
+}
+
+h2 {
+    text-align: left;
+    font-family: TradeGothicBold;
+    font-size: 29.5px;
+    margin-top: 0px;
+    color: var(--brandDarkGreen);
+}
+
+h3 {
+    text-align: left;
+    font-family: TradeGothicBold;
+    font-size: 24px;
+    border-bottom: solid 1px var(--brandGray);
+    color: var(--brandBlack);
+}
+
+p {
+    font-family: SourceSerif;
+    color: var(--brandBlack);
+    text-align: left;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+a {
+    color: var(--brandPink);
+    text-decoration: underline;
+    font-family: RobotoBold;
+}
+
+a:hover {
+    color: var(--brandLightBlue);
+}
+
+
+
+
+

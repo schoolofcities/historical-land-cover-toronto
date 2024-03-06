@@ -2,25 +2,37 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" href="/historical-land-cover-toronto/favicon.svg" />
+		<link rel="icon" href="./favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
-		<meta http-equiv="content-security-policy" content="">
-		<link rel="modulepreload" href="/historical-land-cover-toronto/_app/immutable/start-c9b3a74d.js">
-		<link rel="modulepreload" href="/historical-land-cover-toronto/_app/immutable/chunks/index-9d30f94e.js">
-		<link rel="modulepreload" href="/historical-land-cover-toronto/_app/immutable/chunks/singletons-d2bdb8ea.js">
+		
+		<link rel="modulepreload" href="./_app/immutable/entry/start.d35b28fd.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/scheduler.e108d1fd.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/singletons.f165d13c.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/app.076d891d.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index.304f05f0.js">
+
+		<title>Evolving Cities | School of Cities</title>
 	</head>
 	<body>
 		<div>
-		<script type="module" data-sveltekit-hydrate="45h">
-			import { start } from "/historical-land-cover-toronto/_app/immutable/start-c9b3a74d.js";
+			<script>
+				{
+					__sveltekit_g950t2 = {
+						assets: "/historical-land-cover-toronto",
+						base: new URL(".", location).pathname.slice(0, -1),
+						env: {}
+					};
 
-			start({
-				env: {},
-				hydrate: null,
-				paths: {"base":"/historical-land-cover-toronto","assets":"/historical-land-cover-toronto"},
-				target: document.querySelector('[data-sveltekit-hydrate="45h"]').parentNode,
-				trailing_slash: "never"
-			});
-		</script></div>
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("./_app/immutable/entry/start.d35b28fd.js"),
+						import("./_app/immutable/entry/app.076d891d.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element);
+					});
+				}
+			</script>
+		</div>
 	</body>
 </html>
