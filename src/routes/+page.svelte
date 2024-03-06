@@ -3,6 +3,7 @@
 	import { afterUpdate } from 'svelte';
 
 	import Top from "../lib/TopSofC.svelte";
+	import Construction from "../lib/Construction.svelte";
 	import MapLand from "../lib/Map.svelte";
 	import MapNeighbourhood from '../lib/MapNeighbourhood.svelte';
 	
@@ -30,7 +31,6 @@
 		content="width=device-width, initial-scale=1, minimum-scale=1"
 	/>
 
-	<!-- <link href='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css' rel='stylesheet' /> -->
 
     <!-- <title>Tracking Gentle Density in Toronto</title>
     <meta name="description" content="Visualizing 10 years (2013 to 2022) of Secondary Suite and Laneway / Garden Suite building permits in Toronto">
@@ -56,6 +56,8 @@
 
 <Top/>
 
+<Construction/>
+
 <main>
 	
 	
@@ -68,7 +70,7 @@
 			Tracking access to nature over time in Toronto
 		</h2>
 		<p>
-			Authors
+			Authors, Date
 		</p>
 
 	</div>

@@ -8,6 +8,7 @@
         position: fixed;
 		margin-top: 70px; 
         margin-left: 20px; 
+		padding: 5px;
         top: 0px;
         max-width: 300px;
 		background-color: var(--brandWhite);
