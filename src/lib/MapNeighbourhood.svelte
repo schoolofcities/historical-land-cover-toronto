@@ -1,6 +1,7 @@
 <script>
 
     import './ol.css';
+    import '../assets/styles.css';
 
     import { onMount } from 'svelte';
 
@@ -305,10 +306,28 @@
 
 
 
+<div id="legend2">
+    <svg width="280px" height="70px">
+        <text id="legend-title" x="0" y="18">% Change in Forest (1954-2017)</text>
+        <rect x="240" y="25" width="39" height="15" fill="#0d534d" stroke="#FFFFFF" stroke-width="1"/>
+        <rect x="200" y="25" width="39" height="15" fill="#5b8985" stroke="#FFFFFF" stroke-width="1"/>
+        <rect x="160" y="25" width="39" height="15" fill="#a0b9b7" stroke="#FFFFFF" stroke-width="1"/>
+        <rect x="120" y="25" width="39" height="15" fill="#f2f2f2" stroke="#FFFFFF" stroke-width="1"/>
+        <rect x="80" y="25" width="39" height="15" fill="#f1da71" stroke="#FFFFFF" stroke-width="1"/>
+        <rect x="40" y="25" width="39" height="15" fill="#f1c500" stroke="#FFFFFF" stroke-width="1"/>
+        <rect x="0" y="25" width="39" height="15" fill="#d18100" stroke="#FFFFFF" stroke-width="1"/>
+        <text id="legend-label" x="24" y="55">-50%</text>
+        <text id="legend-label" x="64" y="55">-25%</text>
+        <text id="legend-label" x="104" y="55">-10%</text>
+        <text id="legend-label" x="150" y="55">10%</text>
+        <text id="legend-label" x="190" y="55">25%</text>
+        <text id="legend-label" x="230" y="55">50%</text>
+    </svg>
+</div>
+
 <div id="map2">
 
 </div>
-
 
 
 
@@ -325,6 +344,32 @@
         width: 100%;
         z-index: 3;
         cursor: move;
+    }
+
+    #legend2 {
+        margin: 0 auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 280px;
+        height: 60px;
+        padding: 0px;
+    }
+
+    #legend-title {
+        font-family: 'TradeGothicBold', sans-serif;
+        font-weight: normal;
+        height: 25px;
+        font-size: 20px;
+        background-color:  var(--brandWhite);
+        fill: var(--brandDarkBlue);
+    }
+
+    #legend-label {
+        font-family: 'Roboto', sans-serif;
+        font-weight: normal;
+        font-size: 15px;
+        background-color:  var(--brandWhite);
+        fill: var(--brandDarkBlue);
     }
 
 </style>
