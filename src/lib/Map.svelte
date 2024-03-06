@@ -18,7 +18,7 @@
 	import {getWidth} from 'ol/extent';
 
 
-    import {Fill, Stroke, Style, Text, Circle} from 'ol/style';
+    import {Fill, Stroke, Style, Text} from 'ol/style';
 
     import GeoJSON from 'ol/format/GeoJSON';
 	import VectorLayer from 'ol/layer/Vector';
@@ -245,7 +245,7 @@
                 rotation: 17 * Math.PI / 180,
 				zoom: 12,
 				maxZoom: 15,
-				minZoom: 11,
+				minZoom: 12,
 				extent: [-79.8302,43.3046,-78.9160,44.0295],
 			}),
 			controls: defaultControls(),
