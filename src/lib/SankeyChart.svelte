@@ -34,7 +34,8 @@
     margin: 0 auto;
     margin-top: 10px;
     margin-bottom: 10px;
-    width: 600px;
+    max-width: 600px;
+    width: 100%;
     padding-left: 0px;
     padding-right: 0px;
     border-bottom: solid 1px var(--brandDarkBlue);
