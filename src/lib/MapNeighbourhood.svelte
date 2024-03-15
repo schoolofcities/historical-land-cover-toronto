@@ -318,14 +318,6 @@
 	</svg>
 </div>
 
-<!-- if (feature.get('chng_rl_r') >= 50) {color = '#2e6e68' ;}
-		else if (feature.get('chng_rl_r') >= 30 ){color ='#578581';}
-		else if (feature.get('chng_rl_r') >= 10 ){color ='#9cb4b2';}
-		else if (feature.get('chng_rl_r') >= -10 ){color ='#f2f2f2';}
-		else if (feature.get('chng_rl_r') >= -30 ){color ='#eadb98';}
-		else if (feature.get('chng_rl_r') >= -50 ){color ='#edd04e';}
-		else {color = '#f1c500';} -->
-
 <div id="map2">
 
 </div>
@@ -341,19 +333,23 @@
 		max-height: calc(100vh - 200px);
 		height: 500px;
 		border-bottom: solid 1px var(--brandDarkBlue);
-		border-top: solid 1px var(--brandDarkBlue);
+		border-top: solid 1px var(--brandGray);
 		width: 100%;
 		z-index: 3;
 		cursor: move;
 	}
 
 	#legend2 {
+		border-top: solid 1px var(--brandDarkBlue);
 		margin: 0 auto;
 		margin-top: 10px;
 		margin-bottom: 10px;
-		width: 280px;
+		max-width: 1000px;
+		width: 100%;
 		height: 60px;
 		padding: 0px;
+		padding-top: 10px;
+		text-align: center;
 	}
 
 	#legend-title {

@@ -241,7 +241,7 @@
 			target: 'map',
 			layers: [landCoverLayer, notTorontoLayer, smallStreetsLayer, streetLayer, streetLabelLayer, shorelineLayer, sixLabelLayer],
 			view: new View({
-				center: [-79.38,43.71],
+				center: [-79.371,43.707],
 				rotation: 17 * Math.PI / 180,
 				zoom: 12,
 				maxZoom: 15,
@@ -387,6 +387,7 @@
 		position: relative;
 		width: 100%;
 		height: calc(100vh - 150px);
+		max-height: 830px;
 		border-bottom: solid 1px var(--brandDarkBlue);
 		border-top: solid 1px var(--brandDarkBlue);
 		width: 100%;

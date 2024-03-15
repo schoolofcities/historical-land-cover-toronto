@@ -8,7 +8,7 @@
 </div>
 
 <div id="legend-ribbon">
-    <svg width="360px" height="25px">
+    <svg width="360px" height="26px">
         <rect x="300" y="0" width="60" height="25" fill="#FFFFFF" stroke="#E1E1E1" stroke-width="1"/>
         <rect x="240" y="0" width="60" height="25" fill="#D0D1C9" stroke="#FFFFFF" stroke-width="1"/>
         <rect x="180" y="0" width="60" height="25" fill="#6FC7EA" stroke="#FFFFFF" stroke-width="1"/>
