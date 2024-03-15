@@ -99,7 +99,7 @@
 		});
 	var streetLayer = new VectorLayer({
 		declutter: true,
-		opacity: 0.75,
+		opacity: 0.4,
 		source: vectorSource,
 		style: function (feature) {
 			textStyle.getText().setText(feature.get('n'));
@@ -155,15 +155,15 @@
 	});
 	const neighbourhoodStyles = function(feature) {
 		let color = "grey";
-		if (feature.get('AREA_SHORT_CODE') >= 50) {color = '#0d534d' ;}
-		else if (feature.get('AREA_SHORT_CODE') >= 30 ){color ='#5b8985';}
-		else if (feature.get('AREA_SHORT_CODE') >= 10 ){color ='#a0b9b7';}
-		else if (feature.get('AREA_SHORT_CODE') >= -10 ){color ='#f2f2f2';}
-		else if (feature.get('AREA_SHORT_CODE') >= -30 ){color ='#f1da71';}
-		else if (feature.get('AREA_SHORT_CODE') >= -50 ){color ='#f1c500';}
-		else {color = '#d18100';}
+		if (feature.get('chng_rl_r') >= 50) {color = '#2e6e68' ;}
+		else if (feature.get('chng_rl_r') >= 30 ){color ='#578581';}
+		else if (feature.get('chng_rl_r') >= 10 ){color ='#9cb4b2';}
+		else if (feature.get('chng_rl_r') >= -10 ){color ='#f2f2f2';}
+		else if (feature.get('chng_rl_r') >= -30 ){color ='#eadb98';}
+		else if (feature.get('chng_rl_r') >= -50 ){color ='#edd04e';}
+		else {color = '#f1c500';}
 
-			return  [
+		return  [
 			new Style({
 			stroke: new Stroke({
 				color: 'white',
@@ -175,6 +175,7 @@
 			}),
 		]
 		};
+
 	var neighbourhoodsLayer = new VectorLayer({
 		// declutter: true,
 		source: vectorSource,
@@ -301,13 +302,13 @@
 <div id="legend2">
 	<svg width="280px" height="70px">
 		<text id="legend-title" x="0" y="18">% Change in Forest (1954-2017)</text>
-		<rect x="240" y="25" width="39" height="15" fill="#0d534d" stroke="#FFFFFF" fill-opacity={neighbourhoodOpacity} stroke-width="1"/>
-		<rect x="200" y="25" width="39" height="15" fill="#5b8985" stroke="#FFFFFF" fill-opacity={neighbourhoodOpacity} stroke-width="1"/>
-		<rect x="160" y="25" width="39" height="15" fill="#a0b9b7" stroke="#FFFFFF" fill-opacity={neighbourhoodOpacity} stroke-width="1"/>
+		<rect x="240" y="25" width="39" height="15" fill="#2e6e68" stroke="#FFFFFF" fill-opacity={neighbourhoodOpacity} stroke-width="1"/>
+		<rect x="200" y="25" width="39" height="15" fill="#578581" stroke="#FFFFFF" fill-opacity={neighbourhoodOpacity} stroke-width="1"/>
+		<rect x="160" y="25" width="39" height="15" fill="#9cb4b2" stroke="#FFFFFF" fill-opacity={neighbourhoodOpacity} stroke-width="1"/>
 		<rect x="120" y="25" width="39" height="15" fill="#f2f2f2" stroke="#FFFFFF" fill-opacity={neighbourhoodOpacity} stroke-width="1"/>
-		<rect x="80" y="25" width="39" height="15" fill="#f1da71" stroke="#FFFFFF" fill-opacity={neighbourhoodOpacity} stroke-width="1"/>
-		<rect x="40" y="25" width="39" height="15" fill="#f1c500" stroke="#FFFFFF" fill-opacity={neighbourhoodOpacity} stroke-width="1"/>
-		<rect x="0" y="25" width="39" height="15" fill="#d18100" stroke="#FFFFFF" fill-opacity={neighbourhoodOpacity} stroke-width="1"/>
+		<rect x="80" y="25" width="39" height="15" fill="#eadb98" stroke="#FFFFFF" fill-opacity={neighbourhoodOpacity} stroke-width="1"/>
+		<rect x="40" y="25" width="39" height="15" fill="#edd04e" stroke="#FFFFFF" fill-opacity={neighbourhoodOpacity} stroke-width="1"/>
+		<rect x="0" y="25" width="39" height="15" fill="#f1c500" stroke="#FFFFFF" fill-opacity={neighbourhoodOpacity} stroke-width="1"/>
 		<text id="legend-label" x="24" y="55">-50%</text>
 		<text id="legend-label" x="64" y="55">-30%</text>
 		<text id="legend-label" x="104" y="55">-10%</text>
@@ -316,6 +317,14 @@
 		<text id="legend-label" x="230" y="55">50%</text>
 	</svg>
 </div>
+
+<!-- if (feature.get('chng_rl_r') >= 50) {color = '#2e6e68' ;}
+		else if (feature.get('chng_rl_r') >= 30 ){color ='#578581';}
+		else if (feature.get('chng_rl_r') >= 10 ){color ='#9cb4b2';}
+		else if (feature.get('chng_rl_r') >= -10 ){color ='#f2f2f2';}
+		else if (feature.get('chng_rl_r') >= -30 ){color ='#eadb98';}
+		else if (feature.get('chng_rl_r') >= -50 ){color ='#edd04e';}
+		else {color = '#f1c500';} -->
 
 <div id="map2">
 

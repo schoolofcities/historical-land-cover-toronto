@@ -73,7 +73,7 @@ img {
     }
 
 #legend-label {
-        font-family: 'Roboto', sans-serif;
+        font-family: RobotoRegular, sans-serif;
         font-weight: normal;
         font-size: 12px;
         fill: var(--brandBlack);
