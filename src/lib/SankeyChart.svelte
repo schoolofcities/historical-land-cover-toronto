@@ -16,7 +16,7 @@
         <rect x="72" y="0" width="70" height="25" fill="#00A189" stroke="#FFFFFF" stroke-width="1"/>
         <rect x="0" y="0" width="70" height="25" fill="#f1c500" stroke="#FFFFFF" stroke-width="1"/>
         <text id="legend-label" x="22" y="17">Built</text>
-        <text id="legend-label" x="92" y="17">Grass</text>
+        <text id="legend-label-dark" x="92" y="17">Grass</text>
         <text id="legend-label-dark"x="162" y="17">Forest</text>
         <text id="legend-label" x="234" y="17">Water</text>
         <text id="legend-label" x="310" y="17">Bare</text>
@@ -45,7 +45,7 @@
     font-size: 30px;
     font-family: 'TradeGothicBold', sans-serif;
     font-weight: normal;
-    height: 25px;
+    height: 40px;
     font-size: 20px;
     color: var(--brandDarkBlue);
     background-color: var(--brandWhite);
