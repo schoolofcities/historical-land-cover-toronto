@@ -155,12 +155,12 @@
 	});
 	const neighbourhoodStyles = function(feature) {
 		let color = "grey";
-		if (feature.get('chng_rl_r') >= 50) {color = '#2e6e68' ;}
-		else if (feature.get('chng_rl_r') >= 30 ){color ='#578581';}
+		if (feature.get('chng_rl_r') >= 100) {color = '#2e6e68' ;}
+		else if (feature.get('chng_rl_r') >= 50 ){color ='#578581';}
 		else if (feature.get('chng_rl_r') >= 10 ){color ='#9cb4b2';}
 		else if (feature.get('chng_rl_r') >= -10 ){color ='#f2f2f2';}
-		else if (feature.get('chng_rl_r') >= -30 ){color ='#eadb98';}
-		else if (feature.get('chng_rl_r') >= -50 ){color ='#edd04e';}
+		else if (feature.get('chng_rl_r') >= -50 ){color ='#eadb98';}
+		else if (feature.get('chng_rl_r') >= -100 ){color ='#edd04e';}
 		else {color = '#f1c500';}
 
 		return  [
@@ -309,12 +309,12 @@
 		<rect x="80" y="25" width="39" height="15" fill="#eadb98" stroke="#FFFFFF" fill-opacity={neighbourhoodOpacity} stroke-width="1"/>
 		<rect x="40" y="25" width="39" height="15" fill="#edd04e" stroke="#FFFFFF" fill-opacity={neighbourhoodOpacity} stroke-width="1"/>
 		<rect x="0" y="25" width="39" height="15" fill="#f1c500" stroke="#FFFFFF" fill-opacity={neighbourhoodOpacity} stroke-width="1"/>
-		<text id="legend-label" x="24" y="55">-50%</text>
-		<text id="legend-label" x="64" y="55">-30%</text>
+		<text id="legend-label" x="14" y="55">-100%</text>
+		<text id="legend-label" x="64" y="55">-50%</text>
 		<text id="legend-label" x="104" y="55">-10%</text>
 		<text id="legend-label" x="150" y="55">10%</text>
-		<text id="legend-label" x="190" y="55">30%</text>
-		<text id="legend-label" x="230" y="55">50%</text>
+		<text id="legend-label" x="190" y="55">50%</text>
+		<text id="legend-label" x="230" y="55">100%</text>
 	</svg>
 </div>
 
