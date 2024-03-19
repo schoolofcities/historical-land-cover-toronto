@@ -108,16 +108,12 @@ p {
 }
 
 a {
-    color: var(--brandPink);
+    color: var(--brandMedBlue);
     text-decoration: underline;
-    font-family: RobotoBold;
+    font-family: SourceSerif;
 }
 
 a:hover {
     color: var(--brandLightBlue);
 }
-
-
-
-
 

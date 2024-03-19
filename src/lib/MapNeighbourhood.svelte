@@ -33,8 +33,6 @@
 
 	let map = 0;
 	let load = 0;
-	let year = "1947";
-	let streets = "on";
 
 	var neighbourhoodOpacity = 0.8;
 
