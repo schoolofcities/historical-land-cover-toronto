@@ -7,8 +7,11 @@
 	import MapLand from "../lib/Map.svelte";
 	import MapNeighbourhood from '../lib/MapNeighbourhood.svelte';
 	import SankeyChart from '../lib/SankeyChart.svelte';
+	import GiniChart from "../lib/Gini.svelte";
 	
 	import '../assets/styles.css';
+
+	import topImage from '../assets/top-image.png';
 
 	function shiftDown() {
 		window.scrollTo({
@@ -59,6 +62,10 @@
 
 
 <main>
+
+	<div class="top-image">
+		<img src="{topImage}" alt="Your Image Description">
+	</div>
 	
 	
 	<div class="title">
@@ -83,6 +90,12 @@
 		<p>
 			Trees, whether along streets or in forest fragments, can help. They reflect sunlight, provide shade and convert heat to water vapour. However, benefits from this cooling require one lives and/or works near greenspaces - the closer the better. What happens to neighbourhoods that do not have ready access to green spaces? With climate change, we are experiencing longer and more intense summer heat waves, and it is critical we understand the many ways in which access to nature will shape city life in the future. One way we can begin to do this is by first looking into the past. 
 		</p>
+		
+	</div>
+
+	<MapLand/>
+
+	<div class="text">
 		<p>
 			Cities change over time. As land-use demand ebbs and flows, farm fields are converted into residential neighbourhoods, industrial parks and commercial areas. Marginal spaces like those not amenable to construction constitute the remnant greenspaces of a time before urbanisation was the dominant feature. These are often transformed into parks which, left to their own devices, regenerate into forests that provide ecosystem services to the new urban area. Think of Toronto’s ravine system. 
 		</p>
@@ -95,11 +108,6 @@
 		<p>
 			Nowadays, satellites provide detailed imagery covering the full spectrum of colours we can see, and some we can’t, making it easier to map natural areas. Yet satellite imaging is still a relatively new technology with the oldest images from the late 70s, long after the establishment and growth of most north american cities. Luckily, aeroplanes have been around for longer, and we have been flying airborne cameras to document city shape going back to the 1930s. Taken from a low altitude, these black and white photographs contain a treasure trove of information, but it needs to be extracted. Going from a black and white images to land cover categories (whether a particular area is wooded, grassy, built-up, bare or, well, watery) has up until now involved painstaking visual interpretation by experts - a time-consuming task that limits the number of photographs that can be analysed. We developed a model that breaks down images into smaller areas of manageable size and identifies wooded areas, grass, built up land, bare ground and water bodies in a fraction of the time. 
 		</p>
-	</div>
-
-	<MapLand/>
-
-	<div class="text">
 		<p>
 			Convolutional neural networks (CNN) are a state-of-the-art technique used in image analysis that generate a label for each pixel in input imagery. To achieve accurate label individual pixels, we trained a CNN model using a subset of historical imagery for which we manually mapped land cover. The process of training is called supervised learning. This is because during training, the CNN model learns the pixel properties of input imagery that relate to the user-provided categories (e.g. manually mapped land cover associated with an input aerial photograph). Following training, our CNN model provides accurate and scalable classification of wooded areas, grass, built up land, bare ground and water bodies in input aerial photography. We then deployed our CNN model to map the whole city of Toronto from a series of aerial photographs spanning decades in a relatively short time, allowing us to quantify citywide change over time.
 		</p>
@@ -109,7 +117,7 @@
 
 	<div class="text">
 		<p>
-			We found that since 1939, Toronto development has gone through two distinct phases, from expansion (1950-1973) to infill (1970-1990). During the postwar period, agricultural land was rapidly converted into largely residential developments, reaching an average rate of ~1800 ha/yr between 1954 and 1973. During this time neighbourhoods including Don Mills and Flemingdon Park were developed, and there was significant residential expansion in Etobicoke and North York. In comparison, the infill period saw the development of small but important remnant spaces within the city matrix, resulting in the loss of many nearby green spaces. 
+			We found that since 1939, Toronto development has gone through two distinct phases, from expansion (1950-1973) to infill (1970-1990). During the postwar period, agricultural land was rapidly converted into largely residential developments, reaching an average rate of <b>~1800 ha/yr between 1954 and 1973</b>. During this time neighbourhoods including Don Mills and Flemingdon Park were developed, and there was significant residential expansion in Etobicoke and North York. In comparison, the infill period saw the development of small but important remnant spaces within the city matrix, resulting in the loss of many nearby green spaces. 
 
 		</p>
 		<p>
@@ -128,6 +136,7 @@
 		</p>
 	</div>
 
+	<GiniChart/>
 
 	<div class="text">
 		<p>

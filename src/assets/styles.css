@@ -19,6 +19,11 @@
     src: url("source-serif-pro/SourceSerifPro-Regular.otf");
 }
 
+@font-face {
+    font-family: SourceSerifBold;
+    src: url("source-serif-pro/SourceSerifPro-Bold.otf");
+}
+
 
 :root {
     font-family: Roboto, sans-serif;
@@ -52,11 +57,21 @@ main {
     position: relative;
 }
 
+.top-image {
+    padding-top: 100px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.top-image img {
+    max-width: 100%;
+    height: auto;
+}
+
 .title {
     background-color: none;
     max-width: 600px;
     margin: 0 auto;
-    margin-top: 125px;
+    margin-top: 50px;
     padding-left: 15px;
     padding-right: 15px;
     margin-bottom: 0px;
@@ -105,6 +120,10 @@ p {
     text-align: left;
     font-size: 17px;
     line-height: 28px;
+}
+
+b {
+    font-family: SourceSerifBold;
 }
 
 a {
