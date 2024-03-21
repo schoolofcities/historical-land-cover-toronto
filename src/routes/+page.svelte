@@ -129,10 +129,15 @@
 
 	<div class="text">
 		<p>
-			Of course, the population of Toronto has also changed during this time. Total population has risen from approximately 1.1 M to 2.8M and median household income has gone <a href="https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1110023901&pickMembers%5B0%5D=1.17&pickMembers%5B1%5D=2.1&pickMembers%5B2%5D=3.1&pickMembers%5B3%5D=4.1&cubeTimeFrame.startYear=1976&cubeTimeFrame.endYear=2021&referencePeriods=19760101%2C20210101" target="blank">from 38k to 39k annually  between 1976 and 2021</a> (in constant dollars). Because population growth has occurred proportionally across neighbourhoods, there has not been marked changes in the distribution of nature between different parts of the city, or among residents (Fig2a). On the other hand, the distribution of forest cover relative to resident’s income has changed in important ways (Fig2b). 
+			Of course, the population of Toronto has also changed during this time. Total population has risen from approximately 1.1 M to 2.8M and median household income has gone <a href="https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1110023901&pickMembers%5B0%5D=1.17&pickMembers%5B1%5D=2.1&pickMembers%5B2%5D=3.1&pickMembers%5B3%5D=4.1&cubeTimeFrame.startYear=1976&cubeTimeFrame.endYear=2021&referencePeriods=19760101%2C20210101" target="blank">from 38k to 39k annually  between 1976 and 2021</a> (in constant dollars). Because population growth has occurred proportionally across neighbourhoods, there has not been marked changes in the distribution of nature between different parts of the city, or among residents. 
 		</p>
 		<p>
-			In 1970, one could not have predicted a neighbourhood median income by simply looking at how much forest cover there was, but this appears to no longer be true. Preliminary results show that the relationship between forest cover and income is becoming stronger, with more affluent neighbourhoods increasingly predictably having more forest cover. 
+			The following chart shows small changes in the inequality of forest distribution between different areas in the city and between residents, as measured by the Gini coefficient of forest access inequality (calculated based on forest cover in a 1km radius). Despite turnover in forest cover from development (forest tract disappearance) and regeneration and restoration (forest increase), changes have not led to a marked change in the distribution of forest cover between places or people.
+			
+			
+		
+		
+			
 		</p>
 	</div>
 
@@ -140,7 +145,7 @@
 
 	<div class="text">
 		<p>
-			Relationship between forest cover and demographic factors in Toronto over time. Figure (a) shows small changes in the inequality of forest distribution between different areas in the city and between residents, as measured by the Gini coefficient of forest access inequality (calculated based on forest cover in a 1km radius). Despite turnover in forest cover from development (forest tract disappearance) and regeneration and restoration (forest increase), changes have not led to a marked change in the distribution of forest cover between places or people. Figure (b) shows a change in the relationship between median income (not adjusted for inflation) and forest cover in a 1 km radius, with the relationship between household income and forest cover becoming stronger since the 1970s.
+			On the other hand, the distribution of forest cover relative to resident’s income has changed in important ways. In 1970, one could not have predicted a neighbourhood median income by simply looking at how much forest cover there was, but this appears to no longer be true. Preliminary results show that the relationship between forest cover and income is becoming stronger, with more affluent neighbourhoods increasingly predictably having more forest cover. The following chart shows a change in the relationship between median income (not adjusted for inflation) and forest cover in a 1 km radius, with the relationship between household income and forest cover becoming stronger since the 1970s.
 		</p>
 		<p>
 			Urban forest restoration and tree planting have become a tool of choice for increasing environmental equity in cities. Because forest amount in Toronto has remained relatively stable, changes in the relationship between forest cover and income are more likely due to other processes. For instance, because access to nature is desirable to wealthier households, upper-income homeowners and renters are willing to pay a premium for access to this amenity. At the same time, lower income immigrant settlement communities may tend to be located in areas with less access to forest areas. Depending on which mechanism is operating, planting more trees may contribute little to environmental equity if it is not also accompanied by mechanisms to increase affordability and improve transit. 
