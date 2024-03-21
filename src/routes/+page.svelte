@@ -8,6 +8,7 @@
 	import MapNeighbourhood from '../lib/MapNeighbourhood.svelte';
 	import SankeyChart from '../lib/SankeyChart.svelte';
 	import GiniChart from "../lib/Gini.svelte";
+	import OneKmChart from "../lib/kmChart.svelte";
 	
 	import '../assets/styles.css';
 
@@ -133,11 +134,6 @@
 		</p>
 		<p>
 			The following chart shows small changes in the inequality of forest distribution between different areas in the city and between residents, as measured by the Gini coefficient of forest access inequality (calculated based on forest cover in a 1km radius). Despite turnover in forest cover from development (forest tract disappearance) and regeneration and restoration (forest increase), changes have not led to a marked change in the distribution of forest cover between places or people.
-			
-			
-		
-		
-			
 		</p>
 	</div>
 
@@ -147,6 +143,11 @@
 		<p>
 			On the other hand, the distribution of forest cover relative to resident’s income has changed in important ways. In 1970, one could not have predicted a neighbourhood median income by simply looking at how much forest cover there was, but this appears to no longer be true. Preliminary results show that the relationship between forest cover and income is becoming stronger, with more affluent neighbourhoods increasingly predictably having more forest cover. The following chart shows a change in the relationship between median income (not adjusted for inflation) and forest cover in a 1 km radius, with the relationship between household income and forest cover becoming stronger since the 1970s.
 		</p>
+	</div>
+
+	<OneKmChart/>
+
+	<div class="text">
 		<p>
 			Urban forest restoration and tree planting have become a tool of choice for increasing environmental equity in cities. Because forest amount in Toronto has remained relatively stable, changes in the relationship between forest cover and income are more likely due to other processes. For instance, because access to nature is desirable to wealthier households, upper-income homeowners and renters are willing to pay a premium for access to this amenity. At the same time, lower income immigrant settlement communities may tend to be located in areas with less access to forest areas. Depending on which mechanism is operating, planting more trees may contribute little to environmental equity if it is not also accompanied by mechanisms to increase affordability and improve transit. 
 		</p>

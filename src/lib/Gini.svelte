@@ -267,8 +267,4 @@
 		margin-bottom: 0px;
 		position: relative;
 	}
-
-	.legend {
-		font-family: RobotoRegularRegular;
-	}
 </style>
