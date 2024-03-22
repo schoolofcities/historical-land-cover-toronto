@@ -78,7 +78,10 @@
 			Tracking access to nature over time in Toronto
 		</h2>
 		<p>
-			Françoise Cardou, Nicholas Sookhan, Jeff Allen, Dan Silver, Scott MacIvor, Marc Cadotte
+			<a href="">Françoise Cardou</a>, <a href="">Nicholas Sookhan</a>, <a href="">Jeff Allen</a>, <a href="">Dan Silver</a>, <a href="">Scott MacIvor</a>, <a href="">Marc Cadotte</a>
+			<br>
+			<br>
+			Funded by a <a href="https://schoolofcities.utoronto.ca/programs-opportunities/urban-challenge-grant/" target="blank">School of Cities Urban Challenge Grant</a>.
 		</p>
 
 	</div>
