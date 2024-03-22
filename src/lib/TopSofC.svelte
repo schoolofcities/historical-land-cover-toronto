@@ -29,8 +29,8 @@
 	}
 
 	#logo {
-		margin: auto;
-		max-width: 230px;
+		margin: 0 auto;
+		max-width: 262px;
 		height: 50px;
 	}
 
@@ -43,7 +43,7 @@
 
 	img {
 		height: 50px;
-		color: blue;
+		/* color: blue; */
 	}
 	img:hover {
 		height: 50px;

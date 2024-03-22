@@ -35,26 +35,7 @@
 		name="viewport"
 		content="width=device-width, initial-scale=1, minimum-scale=1"
 	/>
-
-
-    <!-- <title>Tracking Gentle Density in Toronto</title>
-    <meta name="description" content="Visualizing 10 years (2013 to 2022) of Secondary Suite and Laneway / Garden Suite building permits in Toronto">
-    <meta name="author" content="Jeff Allen">
-
-	<meta property="og:title" content="Tracking Gentle Density in Toronto" />
-    <meta property="og:description" content="Visualizing 10 years (2013 to 2022) of Secondary Suite and Laneway / Garden Suite building permits in Toronto" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://schoolofcities.github.io/gentle-density/toronto-building-permits" />
-    <meta property="og:image" content="https://raw.githubusercontent.com/schoolofcities/gentle-density/main/static/web-card.png" />
-    <meta property="og:locale" content="en_CA">
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="https://schoolofcities.github.io/gentle-density/toronto-building-permits" />
-    <meta name="twitter:creator" content="@JeffAllenMaps" />
-    <meta name="twitter:title" content="Tracking Gentle Density in Toronto" />
-    <meta name="twitter:description" content="Visualizing 10 years (2013 to 2022) of Secondary Suite and Laneway / Garden Suite building permits in Toronto" />
-    <meta name="twitter:image" content="https://raw.githubusercontent.com/schoolofcities/gentle-density/main/static/web-card.png" />  -->
-
+	
 </svelte:head>
 
 
@@ -160,8 +141,13 @@
 	</div>
 
 	<div class="text">
-		<h2>More Information</h2>
-		<p>Hi I'm a link to more info</p>
+		<br>
+
+		<h2>Data & Methods</h2>
+
+		<p>The code to create this webpage and it's encompassing maps and charts are on GitHub.</p>
+
+		<br><br><br>
 	</div>
 
 

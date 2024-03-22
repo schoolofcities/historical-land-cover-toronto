@@ -31,7 +31,7 @@
 
 	let map = 0;
 	let load = 0;
-	let year = "1947";
+	let year = "1954";
 	let streets = "on";
 
 
