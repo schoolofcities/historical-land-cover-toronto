@@ -14,16 +14,16 @@
 
 	import topImage from '../assets/top-image.png';
 
-	function shiftDown() {
-		window.scrollTo({
-		top: window.pageYOffset + 300,
-		behavior: 'smooth'
-		});
-	}
+	// function shiftDown() {
+	// 	window.scrollTo({
+	// 	top: window.pageYOffset + 300,
+	// 	behavior: 'smooth'
+	// 	});
+	// }
 
-	afterUpdate(() => {
-		window.scrollTo(0, window.pageYOffset);
-	});
+	// afterUpdate(() => {
+	// 	window.scrollTo(0, window.pageYOffset);
+	// });
 
 </script>
 
@@ -125,7 +125,7 @@
 
 	<div class="text">
 		<p>
-			On the other hand, the distribution of forest cover relative to resident’s income has changed in important ways. In 1970, one could not have predicted a neighbourhood median income by simply looking at how much forest cover there was, but this appears to no longer be true. Preliminary results show that the relationship between forest cover and income is becoming stronger, with more affluent neighbourhoods increasingly predictably having more forest cover. The following chart shows a change in the relationship between median income (not adjusted for inflation) and forest cover in a 1 km radius, with the relationship between household income and forest cover becoming stronger since the 1970s.
+			On the other hand, the distribution of forest cover relative to resident’s income has changed in important ways. In 1970, one could not have predicted a neighbourhood median income by simply looking at how much forest cover there was, but this appears to no longer be true. Preliminary results show that the relationship between forest cover and income is becoming stronger, with more affluent neighbourhoods increasingly predictably having more forest cover. The following chart shows a change in the relationship between median income (not adjusted for inflation) and forest cover within a 1 km radius.
 		</p>
 	</div>
 
@@ -145,7 +145,13 @@
 
 		<h2>Data & Methods</h2>
 
-		<p>The code to create this webpage and it's encompassing maps and charts are on GitHub.</p>
+		<p>
+			The code to create this page and it's encompassing maps and charts are on <a href="https://github.com/schoolofcities/historical-land-cover-toronto" target="blank">GitHub</a>.
+		</p>
+
+		<p>
+			Some of the source aerial imagery used in the machine learning models can be viewed on <a href="https://schoolofcities.github.io/historical-aerial-imagery-toronto/" target="blank">this interactive website</a>.
+		</p>
 
 		<br><br><br>
 	</div>
