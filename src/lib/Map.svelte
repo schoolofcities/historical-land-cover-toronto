@@ -30,10 +30,12 @@
 	
 
 	let map = 0;
+	let mapWidth;
+	let mapHeight;
 	let load = 0;
-	let year = "1954";
+	let year = "1947";
 	let streets = "on";
-
+	
 
 	// initial land cover layer
 	var landCoverSource = new XYZ({
@@ -237,16 +239,26 @@
 
 		load = 1;
 
+		let initZoom;
+
+		console.log(mapHeight);
+
+		if (mapHeight < 600 || mapWidth < 600) {
+			initZoom = 11;
+		} else {
+			initZoom = 12;
+		}
+
 		map = new Map({
 			target: 'map',
 			layers: [landCoverLayer, notTorontoLayer, smallStreetsLayer, streetLayer, streetLabelLayer, shorelineLayer, sixLabelLayer],
 			view: new View({
 				center: [-79.371,43.713],
 				rotation: 17 * Math.PI / 180,
-				zoom: 12,
+				zoom: initZoom,
 				maxZoom: 15,
-				minZoom: 12,
-				extent: [-79.8302,43.3046,-78.9160,44.0295],
+				minZoom: 11,
+				extent: [-80.2,42.9,-78.4,44.4],
 			}),
 			controls: defaultControls(),
 			interactions: defaultInteractions({
@@ -309,7 +321,7 @@
 
 
 
-<div id="map">
+<div id="map" bind:clientWidth={mapWidth} bind:clientHeight={mapHeight}>
 
 	<div id="legend">
 
@@ -386,7 +398,7 @@
 	#map {
 		position: relative;
 		width: 100%;
-		height: calc(100vh - 200px);
+		height: calc(100vh * 0.8);
 		max-height: 830px;
 		border-bottom: solid 1px var(--brandDarkBlue);
 		border-top: solid 1px var(--brandDarkBlue);
