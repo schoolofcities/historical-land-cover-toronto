@@ -59,7 +59,7 @@
 			Tracking access to nature over time in Toronto
 		</h2>
 		<p>
-			<a href="">Françoise Cardou</a>, <a href="">Nicholas Sookhan</a>, <a href="">Jeff Allen</a>, <a href="">Dan Silver</a>, <a href="">Scott MacIvor</a>, <a href="">Marc Cadotte</a>
+			<a href="https://francoisecardou.wixsite.com/site" target="_blank">Françoise Cardou</a>, <a href="https://github.com/nsookhan" target="_blank">Nicholas Sookhan</a>, <a href="https://jamaps.github.io/" target="_blank">Jeff Allen</a>, <a href="https://www.researchgate.net/profile/Daniel-Silver-4" target="_blank">Dan Silver</a>, <a href="https://www.macivorlab.ca/" target="_blank">Scott MacIvor</a>, <a href="https://cubes-labs.com/" target="_blank">Marc Cadotte</a>
 			<br>
 			<br>
 			Funded by a <a href="https://schoolofcities.utoronto.ca/programs-opportunities/urban-challenge-grant/" target="blank">School of Cities Urban Challenge Grant</a>.
@@ -91,10 +91,13 @@
 			One challenge to the study of such feedback has been the lack of information on urban nature during the process of city growth. Where were the forests and how large were they? Were they always close to where people lived, or far? Our team combined emerging methods in machine learning and historical photographic material to begin answering some of these questions. 
 		</p>
 		<p>
-			Nowadays, satellites provide detailed imagery covering the full spectrum of colours we can see, and some we can’t, making it easier to map natural areas. Yet satellite imaging is still a relatively new technology with the oldest images from the late 70s, long after the establishment and growth of most north american cities. Luckily, aeroplanes have been around for longer, and we have been flying airborne cameras to document city shape going back to the 1930s. Taken from a low altitude, these black and white photographs contain a treasure trove of information, but it needs to be extracted. Going from a black and white images to land cover categories (whether a particular area is wooded, grassy, built-up, bare or, well, watery) has up until now involved painstaking visual interpretation by experts - a time-consuming task that limits the number of photographs that can be analysed. We developed a model that breaks down images into smaller areas of manageable size and identifies wooded areas, grass, built up land, bare ground and water bodies in a fraction of the time. 
+			Nowadays, satellites provide detailed imagery covering the full spectrum of colours we can see, and some we can’t, making it easier to map natural areas. Yet satellite imaging is still a relatively new technology with the oldest images from the late 70s, long after the establishment and growth of most north american cities. Luckily, aeroplanes have been around for longer, and we have been flying airborne cameras to document city shape going back to the 1930s. Taken from a low altitude, these black and white photographs contain a treasure trove of information, but it needs to be extracted. 
 		</p>
 		<p>
-			Convolutional neural networks (CNN) are a state-of-the-art technique used in image analysis that generate a label for each pixel in input imagery. To achieve accurate label individual pixels, we trained a CNN model using a subset of historical imagery for which we manually mapped land cover. The process of training is called supervised learning. This is because during training, the CNN model learns the pixel properties of input imagery that relate to the user-provided categories (e.g. manually mapped land cover associated with an input aerial photograph). Following training, our CNN model provides accurate and scalable classification of wooded areas, grass, built up land, bare ground and water bodies in input aerial photography. We then deployed our CNN model to map the whole city of Toronto from a series of aerial photographs spanning decades in a relatively short time, allowing us to quantify citywide change over time.
+			Going from a black and white images to land cover categories (whether a particular area is wooded, grassy, built-up, bare or, well, watery) has up until now involved painstaking visual interpretation by experts - a time-consuming task that limits the number of photographs that can be analysed. We developed a model that breaks down images into smaller areas of manageable size and identifies wooded areas, grass, built up land, bare ground and water bodies in a fraction of the time. 
+		</p>
+		<p>
+			Convolutional neural networks (CNN) are a state-of-the-art technique used in image analysis that generate a label for each pixel in input imagery. To achieve accurate label individual pixels, we trained a CNN model using a subset of historical imagery for which we manually mapped land cover. The process of training is called supervised learning. This is because during training, the CNN model learns the pixel properties of input imagery that relate to the user-provided categories (e.g. manually mapped land cover associated with an input aerial photograph). Following training, our CNN model provides accurate and scalable classification of wooded areas, grass, built up land, bare ground and water bodies in input aerial photography. We then deployed our CNN model to map the whole city of Toronto from a <a href="https://schoolofcities.github.io/historical-aerial-imagery-toronto/" target="_blank">series of aerial photographs</a> spanning decades in a relatively short time, allowing us to quantify citywide change over time.
 		</p>
 	</div>
 
@@ -143,13 +146,10 @@
 	<div class="text">
 		<br>
 
-		<h2>Data & Methods</h2>
+		<h2>More Information</h2>
 
 		<p>
-			The code to create this page and it's encompassing maps and charts are on <a href="https://github.com/schoolofcities/historical-land-cover-toronto" target="blank">GitHub</a>.
-		</p>
-
-		<p>
+			The code to create this page and it's encompassing maps and charts are on <a href="https://github.com/schoolofcities/historical-land-cover-toronto" target="blank">GitHub</a>. 
 			Some of the source aerial imagery used in the machine learning models can be viewed on <a href="https://schoolofcities.github.io/historical-aerial-imagery-toronto/" target="blank">this interactive website</a>.
 		</p>
 

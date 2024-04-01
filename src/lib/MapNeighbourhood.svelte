@@ -36,6 +36,9 @@
 
 	var neighbourhoodOpacity = 0.8;
 
+	let printAreaName = "";
+	let printPercentValue = "";
+
 
 	// local streets layer
 	var smallStreetsSource = new XYZ({
@@ -182,6 +185,11 @@
 	neighbourhoodsLayer.setOpacity(neighbourhoodOpacity);
 
 
+	
+
+
+
+	// notToronto layer
 	var features = new GeoJSON().readFeatures(notToronto, {
 		});
 	var vectorSource = new VectorSource({
@@ -193,7 +201,7 @@
 		}),
 		stroke: new Stroke({
 			color: '#1E3765',
-			width: 1
+			width: 1.5
 		})
 	});
 	var notTorontoLayer = new VectorLayer({
@@ -219,6 +227,40 @@
 		style: function (feature) {
 			return shorelineStyle;
 	  	},		
+	});
+
+
+	// neighbourhood stroke layer
+	var features = new GeoJSON().readFeatures(neighbourhoods, {
+		});
+	var vectorSource = new VectorSource({
+		features
+	});
+	var neighbourhoodsStrokeStyle= new Style({
+		stroke: new Stroke({
+			color: '#1E3765',
+			width: 0.25
+		}),
+		fill: new Fill({
+			color: [255,0,0,0.01]
+		}),
+	});
+	var neighbourhoodsStrokeLayer = new VectorLayer({
+		// declutter: true,
+		source: vectorSource,
+		style: function (feature) {
+			return neighbourhoodsStrokeStyle;
+	  	},		
+	});
+
+	const selectStyle = new Style({
+		stroke: new Stroke({
+			color: '#1E3765',
+			width: 4,
+		}),
+		fill: new Fill({
+			color: [0,0,0,0.1]
+		}),
 	});
 
 
@@ -274,7 +316,7 @@
 
 		map = new Map({
 			target: 'map2',
-			layers: [smallStreetsLayer, streetLayer, streetLabelLayer, neighbourhoodsLayer,  notTorontoLayer, shorelineLayer, sixLabelLayer],
+			layers: [smallStreetsLayer, streetLayer, streetLabelLayer, neighbourhoodsLayer, notTorontoLayer, shorelineLayer, neighbourhoodsStrokeLayer, sixLabelLayer],
 			view: new View({
 				center: [-79.38,43.71],
 				rotation: 17 * Math.PI / 180,
@@ -290,7 +332,58 @@
 		})
 		
 		map.addControl(new ScaleLine({units: 'metric', maxWidth: 75}));
-	
+
+		// hover and print neighbourhood that is hovered
+		let selected = null;
+		map.on('pointermove', function (e) {
+			if (selected !== null) {
+				selected.setStyle(undefined);
+				printAreaName = "";
+				printPercentValue = "";
+				selected = null;
+			}
+			map.forEachFeatureAtPixel(
+				e.pixel, 
+				function (f) {
+					selected = f;
+					printAreaName = selected.values_.AREA_NA.slice(0, -5) + " = ";
+					printPercentValue = (Math.round(selected.values_.chng_rl_r * 10) / 10).toString() + "%";
+					f.setStyle(selectStyle);
+					return true;
+				},
+				{
+					layerFilter: layer => layer === neighbourhoodsStrokeLayer
+				}
+			);
+		});
+
+		map.on('singleclick', function (e) {
+			if (selected !== null) {
+				selected.setStyle(undefined);
+				printAreaName = "";
+				printPercentValue = "";
+				selected = null;
+			}
+			map.forEachFeatureAtPixel(
+				e.pixel, 
+				function (f) {
+					selected = f;
+					printAreaName = selected.values_.AREA_NA.slice(0, -5) + " = ";
+					printPercentValue = (Math.round(selected.values_.chng_rl_r * 10) / 10).toString() + "%";
+					f.setStyle(selectStyle);
+					return true;
+				},
+				{
+					layerFilter: layer => layer === neighbourhoodsStrokeLayer
+				}
+			);
+		});
+
+		
+
+
+
+		// var features = map.getFeaturesAtPixel();
 	});
 
 </script>
@@ -320,6 +413,10 @@
 
 </div>
 
+<div id="area">
+	<p>{printAreaName}<b>{printPercentValue}</b></p>
+</div>
+
 
 
 <style>
@@ -330,7 +427,7 @@
 		width: 100%;
 		max-height: calc(100vh - 200px);
 		height: 500px;
-		border-bottom: solid 1px var(--brandDarkBlue);
+		border-bottom: solid 1px var(--brandGray);
 		border-top: solid 1px var(--brandGray);
 		width: 100%;
 		z-index: 3;
@@ -365,6 +462,27 @@
 		font-size: 15px;
 		background-color:  var(--brandWhite);
 		fill: var(--brandDarkBlue);
+	}
+
+	#area {
+		border-bottom: solid 1px var(--brandDarkBlue);
+		margin: 0 auto;
+		max-width: 1000px;
+		width: 100%;
+		height: 30px;
+	}
+
+	#area p {
+		font-family: 'Roboto', sans-serif;
+		margin: 0 auto;
+		font-weight: normal;
+		font-size: 15px;
+		color: var(--brandDarkBlue);
+		text-align: center;
+	}
+
+	#area b {
+		font-family: 'RobotoBold', sans-serif;
 	}
 
 </style>

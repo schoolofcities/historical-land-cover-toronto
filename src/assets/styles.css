@@ -97,7 +97,7 @@ main {
 
 h1 {
 	font-family: TradeGothicBold;
-	font-size: 42px;
+	font-size: 46px;
 	color: var(--brandDarkBlue);
 	border-bottom: solid 1px var(--brandGray);
 	text-decoration: none;
