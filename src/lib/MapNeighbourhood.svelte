@@ -36,6 +36,9 @@
 
 	var neighbourhoodOpacity = 0.8;
 
+	let printAreaName = "";
+	let printPercentValue = "";
+
 
 	// local streets layer
 	var smallStreetsSource = new XYZ({
@@ -182,6 +185,11 @@
 	neighbourhoodsLayer.setOpacity(neighbourhoodOpacity);
 
 
+	
+
+
+
+	// notToronto layer
 	var features = new GeoJSON().readFeatures(notToronto, {
 		});
 	var vectorSource = new VectorSource({
@@ -193,7 +201,7 @@
 		}),
 		stroke: new Stroke({
 			color: '#1E3765',
-			width: 1
+			width: 1.5
 		})
 	});
 	var notTorontoLayer = new VectorLayer({
@@ -219,6 +227,40 @@
 		style: function (feature) {
 			return shorelineStyle;
 	  	},		
+	});
+
+
+	// neighbourhood stroke layer
+	var features = new GeoJSON().readFeatures(neighbourhoods, {
+		});
+	var vectorSource = new VectorSource({
+		features
+	});
+	var neighbourhoodsStrokeStyle= new Style({
+		stroke: new Stroke({
+			color: '#1E3765',
+			width: 0.25
+		}),
+		fill: new Fill({
+			color: [255,0,0,0.01]
+		}),
+	});
+	var neighbourhoodsStrokeLayer = new VectorLayer({
+		// declutter: true,
+		source: vectorSource,
+		style: function (feature) {
+			return neighbourhoodsStrokeStyle;
+	  	},		
+	});
+
+	const selectStyle = new Style({
+		stroke: new Stroke({
+			color: '#1E3765',
+			width: 4,
+		}),
+		fill: new Fill({
+			color: [0,0,0,0.1]
+		}),
 	});
 
 
@@ -274,7 +316,7 @@
 
 		map = new Map({
 			target: 'map2',
-			layers: [smallStreetsLayer, streetLayer, streetLabelLayer, neighbourhoodsLayer,  notTorontoLayer, shorelineLayer, sixLabelLayer],
+			layers: [smallStreetsLayer, streetLayer, streetLabelLayer, neighbourhoodsLayer, notTorontoLayer, shorelineLayer, neighbourhoodsStrokeLayer, sixLabelLayer],
 			view: new View({
 				center: [-79.38,43.71],
 				rotation: 17 * Math.PI / 180,
@@ -290,7 +332,37 @@
 		})
 		
 		map.addControl(new ScaleLine({units: 'metric', maxWidth: 75}));
-	
+
+		// hover and print neighbourhood that is hovered
+		let selected = null;
+		map.on('pointermove', function (e) {
+			if (selected !== null) {
+				selected.setStyle(undefined);
+				printAreaName = "";
+				printPercentValue = "";
+				selected = null;
+			}
+			map.forEachFeatureAtPixel(
+				e.pixel, 
+				function (f) {
+					selected = f;
+					printAreaName = selected.values_.AREA_NA;
+					printPercentValue = selected.values_.chng_rl_r;
+					f.setStyle(selectStyle);
+					return true;
+				},
+				{
+					layerFilter: layer => layer === neighbourhoodsStrokeLayer
+				}
+			);
+
+		});
+
+		
+
+
+
+		// var features = map.getFeaturesAtPixel();
 	});
 
 </script>
@@ -319,6 +391,8 @@
 <div id="map2">
 
 </div>
+
+<p>{printAreaName} {printPercentValue}</p>
 
 
 
