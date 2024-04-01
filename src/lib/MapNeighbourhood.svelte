@@ -355,7 +355,28 @@
 					layerFilter: layer => layer === neighbourhoodsStrokeLayer
 				}
 			);
+		});
 
+		map.on('singleclick', function (e) {
+			if (selected !== null) {
+				selected.setStyle(undefined);
+				printAreaName = "";
+				printPercentValue = "";
+				selected = null;
+			}
+			map.forEachFeatureAtPixel(
+				e.pixel, 
+				function (f) {
+					selected = f;
+					printAreaName = selected.values_.AREA_NA.slice(0, -5) + " = ";
+					printPercentValue = (Math.round(selected.values_.chng_rl_r * 10) / 10).toString() + "%";
+					f.setStyle(selectStyle);
+					return true;
+				},
+				{
+					layerFilter: layer => layer === neighbourhoodsStrokeLayer
+				}
+			);
 		});
 
 		
