@@ -97,7 +97,7 @@
 			Going from a black and white images to land cover categories (whether a particular area is wooded, grassy, built-up, bare or, well, watery) has up until now involved painstaking visual interpretation by experts - a time-consuming task that limits the number of photographs that can be analysed. We developed a model that breaks down images into smaller areas of manageable size and identifies wooded areas, grass, built up land, bare ground and water bodies in a fraction of the time. 
 		</p>
 		<p>
-			Convolutional neural networks (CNN) are a state-of-the-art technique used in image analysis that generate a label for each pixel in input imagery. To achieve accurate label individual pixels, we trained a CNN model using a subset of historical imagery for which we manually mapped land cover. The process of training is called supervised learning. This is because during training, the CNN model learns the pixel properties of input imagery that relate to the user-provided categories (e.g. manually mapped land cover associated with an input aerial photograph). Following training, our CNN model provides accurate and scalable classification of wooded areas, grass, built up land, bare ground and water bodies in input aerial photography. We then deployed our CNN model to map the whole city of Toronto from a series of aerial photographs spanning decades in a relatively short time, allowing us to quantify citywide change over time.
+			Convolutional neural networks (CNN) are a state-of-the-art technique used in image analysis that generate a label for each pixel in input imagery. To achieve accurate label individual pixels, we trained a CNN model using a subset of historical imagery for which we manually mapped land cover. The process of training is called supervised learning. This is because during training, the CNN model learns the pixel properties of input imagery that relate to the user-provided categories (e.g. manually mapped land cover associated with an input aerial photograph). Following training, our CNN model provides accurate and scalable classification of wooded areas, grass, built up land, bare ground and water bodies in input aerial photography. We then deployed our CNN model to map the whole city of Toronto from a <a href="https://schoolofcities.github.io/historical-aerial-imagery-toronto/" target="_blank">series of aerial photographs</a> spanning decades in a relatively short time, allowing us to quantify citywide change over time.
 		</p>
 	</div>
 
@@ -146,13 +146,10 @@
 	<div class="text">
 		<br>
 
-		<h2>Data & Methods</h2>
+		<h2>More Information</h2>
 
 		<p>
-			The code to create this page and it's encompassing maps and charts are on <a href="https://github.com/schoolofcities/historical-land-cover-toronto" target="blank">GitHub</a>.
-		</p>
-
-		<p>
+			The code to create this page and it's encompassing maps and charts are on <a href="https://github.com/schoolofcities/historical-land-cover-toronto" target="blank">GitHub</a>. 
 			Some of the source aerial imagery used in the machine learning models can be viewed on <a href="https://schoolofcities.github.io/historical-aerial-imagery-toronto/" target="blank">this interactive website</a>.
 		</p>
 
