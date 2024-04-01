@@ -346,8 +346,8 @@
 				e.pixel, 
 				function (f) {
 					selected = f;
-					printAreaName = selected.values_.AREA_NA;
-					printPercentValue = selected.values_.chng_rl_r;
+					printAreaName = selected.values_.AREA_NA.slice(0, -5) + " = ";
+					printPercentValue = (Math.round(selected.values_.chng_rl_r * 10) / 10).toString() + "%";
 					f.setStyle(selectStyle);
 					return true;
 				},
@@ -392,7 +392,9 @@
 
 </div>
 
-<p>{printAreaName} {printPercentValue}</p>
+<div id="area">
+	<p>{printAreaName}<b>{printPercentValue}</b></p>
+</div>
 
 
 
@@ -404,7 +406,7 @@
 		width: 100%;
 		max-height: calc(100vh - 200px);
 		height: 500px;
-		border-bottom: solid 1px var(--brandDarkBlue);
+		border-bottom: solid 1px var(--brandGray);
 		border-top: solid 1px var(--brandGray);
 		width: 100%;
 		z-index: 3;
@@ -439,6 +441,27 @@
 		font-size: 15px;
 		background-color:  var(--brandWhite);
 		fill: var(--brandDarkBlue);
+	}
+
+	#area {
+		border-bottom: solid 1px var(--brandDarkBlue);
+		margin: 0 auto;
+		max-width: 1000px;
+		width: 100%;
+		height: 30px;
+	}
+
+	#area p {
+		font-family: 'Roboto', sans-serif;
+		margin: 0 auto;
+		font-weight: normal;
+		font-size: 15px;
+		color: var(--brandDarkBlue);
+		text-align: center;
+	}
+
+	#area b {
+		font-family: 'RobotoBold', sans-serif;
 	}
 
 </style>
