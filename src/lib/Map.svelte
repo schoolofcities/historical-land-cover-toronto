@@ -412,7 +412,7 @@
 		bottom: 10px;
 		right: 10px;
 		height: 170px;
-		width: 300px;
+		width: 310px;
 		background-color: rgba(255, 255, 255, 0.95);
 		border: solid 1px var(--brandDarkBlue);
 		border-radius: 3px;
@@ -522,7 +522,7 @@
 
 	#toggle-streets-wrapper {
 		border-top: solid 1px var(--brandDarkBlue);
-		width: 300px;
+		width: 310px;
 		padding-top: 3px;
 	}
 

@@ -239,7 +239,7 @@
 	var neighbourhoodsStrokeStyle= new Style({
 		stroke: new Stroke({
 			color: '#1E3765',
-			width: 0.25
+			width: 0.33
 		}),
 		fill: new Fill({
 			color: [255,0,0,0.01]
