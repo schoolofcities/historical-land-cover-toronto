@@ -62,7 +62,7 @@
 			<a href="https://francoisecardou.wixsite.com/site" target="_blank">Françoise Cardou</a>, <a href="https://github.com/nsookhan" target="_blank">Nicholas Sookhan</a>, <a href="https://jamaps.github.io/" target="_blank">Jeff Allen</a>, <a href="https://www.researchgate.net/profile/Daniel-Silver-4" target="_blank">Dan Silver</a>, <a href="https://www.macivorlab.ca/" target="_blank">Scott MacIvor</a>, <a href="https://cubes-labs.com/" target="_blank">Marc Cadotte</a>
 			<br>
 			<br>
-			Funded by a <a href="https://schoolofcities.utoronto.ca/programs-opportunities/urban-challenge-grant/" target="blank">School of Cities Urban Challenge Grant</a>.
+			Funded by a <a href="https://schoolofcities.utoronto.ca/programs-opportunities/urban-challenge-grant/" target="blank">School of Cities Urban Challenge Grant</a>, Toronto and Region Conservation Authority, and Mitacs.
 		</p>
 
 	</div>
