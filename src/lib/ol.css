@@ -26,8 +26,8 @@
 .ol-scale-line {
   background: var(--ol-partial-background-color);
   border-radius: 4px;
-  bottom: 10px;
-  left: 10px;  
+  top: 10px;
+  right: 10px;  
   padding: 2px;
   position: absolute;
 }
@@ -45,8 +45,8 @@
 
 .ol-scale-bar {
   position: absolute;
-  bottom: 8px;
-  left: 8px;
+  top: 8px;
+  right: 8px;
 }
 
 .ol-scale-bar-inner {

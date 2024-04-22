@@ -8,19 +8,24 @@
 </div>
 
 <div id="legend-ribbon">
-	<svg width="360px" height="26px">
-		<rect x="300" y="0" width="60" height="25" fill="#FFFFFF" stroke="#E1E1E1" stroke-width="1"/>
-		<rect x="240" y="0" width="60" height="25" fill="#D0D1C9" stroke="#FFFFFF" stroke-width="1"/>
-		<rect x="180" y="0" width="60" height="25" fill="#6FC7EA" stroke="#FFFFFF" stroke-width="1"/>
-		<rect x="120" y="0" width="60" height="25" fill="#0D534D" stroke="#FFFFFF" stroke-width="1"/>
-		<rect x="60" y="0" width="60" height="25" fill="#00A189" stroke="#FFFFFF" stroke-width="1"/>
+	<svg width="360px" height="27px">
+
+		<rect x="2" y="0" width="356" height="26" fill="#fff" stroke="#1E3765" stroke-width="1"/>
+
 		<rect x="0" y="0" width="60" height="25" fill="#f1c500" stroke="#FFFFFF" stroke-width="1"/>
+		<rect x="60" y="0" width="60" height="25" fill="#0D534D" stroke="#FFFFFF" stroke-width="1"/>
+		<rect x="120" y="0" width="60" height="25" fill="#00A189" stroke="#FFFFFF" stroke-width="1"/>
+		<rect x="180" y="0" width="60" height="25" fill="#D0D1C9" stroke="#FFFFFF" stroke-width="1"/>
+		<rect x="240" y="0" width="60" height="25" fill="#6FC7EA" stroke="#FFFFFF" stroke-width="1"/>
+		<rect x="300" y="0" width="60" height="25" fill="#FFFFFF" stroke="#E1E1E1" stroke-width="1"/>
+		
 		<text id="legend-label" x="30" y="17" text-anchor="middle">Built</text>
-		<text id="legend-label-dark" x="90" y="17" text-anchor="middle">Grass</text>
-		<text id="legend-label-dark"x="150" y="17" text-anchor="middle">Forest</text>
-		<text id="legend-label" x="210" y="17" text-anchor="middle">Water</text>
-		<text id="legend-label" x="270" y="17" text-anchor="middle">Bare</text>
+		<text id="legend-label-dark" x="90" y="17" text-anchor="middle">Forest</text>
+		<text id="legend-label-dark"x="150" y="17" text-anchor="middle">Grass</text>
+		<text id="legend-label" x="210" y="17" text-anchor="middle">Bare</text>
+		<text id="legend-label" x="270" y="17" text-anchor="middle">Water</text>
 		<text id="legend-label" x="330" y="17" text-anchor="middle">No Data</text>
+
 	</svg>
 </div>
 

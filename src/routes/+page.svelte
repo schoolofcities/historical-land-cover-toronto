@@ -128,7 +128,7 @@
 
 	<div class="text">
 		<p>
-			On the other hand, the distribution of forest cover relative to resident’s income has changed in important ways. In 1970, one could not have predicted a neighbourhood median income by simply looking at how much forest cover there was, but this appears to no longer be true. Preliminary results show that the relationship between forest cover and income is becoming stronger, with more affluent neighbourhoods increasingly predictably having more forest cover. The following chart shows a change in the relationship between median income (not adjusted for inflation) and forest cover within a 1 km radius.
+			On the other hand, the distribution of forest cover relative to resident's income has changed in important ways. While the relationship between median income and forest has existed since 1970, at that time, it would have been difficult to predict a neighbourhood's median income by simply looking at how much forest cover there was, but this has been changing. Preliminary results show a marked increase in the correlation between these two variables since the 1970s. In other words, the relationship between forest cover and income is becoming stronger, with more affluent neighbourhoods increasingly predictably having more forest cover. Moreover, this relationship appears to be increasingly exponential. The following chart (shown on a log-log scale) shows a change in the shape of the relationship between median income (not adjusted for inflation) and forest cover within a 1 km radius.
 		</p>
 	</div>
 
