@@ -1,17 +1,20 @@
 <script>
-	import logo from '../assets/top-logo-full.svg';
+	import logoFull from '/src/assets/top-logo-full.svg';
+
+
+	
+
 </script>
 
-<div id="bar">
+<div id="bar" >
 
 	<div id="logo">
-		<a href="https://www.schoolofcities.utoronto.ca/"><img src={logo} alt="School of Cities"></a>
+		<a href="https://www.schoolofcities.utoronto.ca/"><img src={logoFull} alt="School of Cities"></a>
 	</div>
 
 </div>
 
 <style>
-
 	#bar {
 		position: fixed;
 		overflow: hidden;
@@ -19,36 +22,39 @@
 		height: 50px;
 		background-color: var(--brandWhite);
 		margin-bottom: 20px;
-		border-bottom: 1px solid var(--brandDarkBlue);
+		border-bottom: 1px solid var(--brandGray);
 		width: 100%;
 		min-width: 200px;
 		padding-left: 0px;
 		padding-right: 0px;
-		z-index: 5;
+		margin-right: 0px;
+		margin-left: 0px;
+		z-index: 99999;
 		opacity: 0.98;
+		box-shadow: 0 2px 0 0 rgba(224, 224, 224, 0.268);
 	}
 
 	#logo {
-		margin: 0 auto;
-		max-width: 262px;
+		margin: auto;
+		width: 270px;
 		height: 50px;
+		z-index: 99999;
 	}
 
 	a {
 		color: black;
 	}
 	a:hover {
-		opacity: 0.7;
+		opacity: 0.5;
 	}
 
 	img {
+		color: blue;
 		height: 50px;
-		/* color: blue; */
+		width: auto;
 	}
 	img:hover {
-		height: 50px;
-		opacity: 0.7;
+		opacity: 0.5;
 		cursor: pointer;
 	}
-
 </style>

@@ -64,8 +64,11 @@
 			<br>
 			Funded by a <a href="https://schoolofcities.utoronto.ca/programs-opportunities/urban-challenge-grant/" target="blank">School of Cities Urban Challenge Grant</a>, Toronto and Region Conservation Authority, and Mitacs.
 		</p>
+		
 
 	</div>
+
+	
 
 
 	<div class="text">

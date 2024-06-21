@@ -435,7 +435,7 @@
 	}
 
 	#legend2 {
-		border-top: solid 1px var(--brandDarkBlue);
+		border-top: solid 1px var(--brandGray);
 		margin: 0 auto;
 		margin-top: 10px;
 		margin-bottom: 10px;
@@ -465,7 +465,8 @@
 	}
 
 	#area {
-		border-bottom: solid 1px var(--brandDarkBlue);
+		border-bottom: solid 1px var(--brandGray);
+		box-shadow: 0 2px 0 0 rgba(224, 224, 224, 0.268);
 		margin: 0 auto;
 		max-width: 1000px;
 		width: 100%;

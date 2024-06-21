@@ -246,7 +246,8 @@
 		width: 100%;
 		padding-left: 0px;
 		padding-right: 0px;
-		border-bottom: solid 1px var(--brandDarkBlue);
+		border-bottom: solid 1px var(--brandGray);
+		box-shadow: 0 2px 0 0 rgba(224, 224, 224, 0.268);
 		text-align: center;
 	}
 
@@ -259,7 +260,7 @@
 		font-size: 20px;
 		color: var(--brandDarkBlue);
 		background-color: var(--brandWhite);
-		border-top: solid 1px var(--brandDarkBlue);
+		border-top: solid 1px var(--brandGray);
 		padding-top: 10px;
 		max-width: 600px;
 		margin: 0 auto;

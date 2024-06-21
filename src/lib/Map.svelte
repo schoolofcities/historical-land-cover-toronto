@@ -400,8 +400,9 @@
 		width: 100%;
 		height: calc(100vh * 0.8);
 		max-height: 830px;
-		border-bottom: solid 1px var(--brandDarkBlue);
-		border-top: solid 1px var(--brandDarkBlue);
+		border-top: solid 1px var(--brandGray);
+		border-bottom: solid 1px var(--brandGray);
+		box-shadow: 0 2px 0 0 rgba(224, 224, 224, 0.268);
 		width: 100%;
 		z-index: 1;
 		cursor: move;
