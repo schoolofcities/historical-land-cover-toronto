@@ -325,7 +325,7 @@
 
 	<div id="legend">
 
-		<h3>Historical Land-Cover Toronto</h3>
+		<h3>Historical Land-Cover In Toronto</h3>
 
 		<div id="land-cover">
 
